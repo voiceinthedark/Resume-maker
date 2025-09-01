@@ -7,6 +7,7 @@
   .infoicon:hover {
     fill: rgba(220, 0, 0, 0.8);
     cursor: pointer;
+    transform: rotate(30deg);
   }
 
   .link-item {
@@ -21,7 +22,7 @@
       gap: 8px;
 
       .infoicon {
-        margin-left: 18px;
+        margin-left: 12px;
       }
 
       label {
@@ -49,7 +50,7 @@
     .item-input {
       display: flex;
       align-items: center;
-      width: 21.3rem;
+      width: 20rem;
 
       input[type='text'],
       textarea {
@@ -59,17 +60,18 @@
         width: inherit;
         font-weight: bold;
       }
+
       .remove-btn {
         border: none;
         background: transparent;
-        .removicon{
-          margin-left: 8px;
-        }
+
       }
     }
+  }
 
-
-
+  .removeicon,
+  .infoicon{
+    transition: transform 0.3s linear;
   }
 
 
