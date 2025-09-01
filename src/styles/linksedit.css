@@ -1,5 +1,73 @@
 #link-edit {
+  padding-top: 8px;
   width: 90%;
+  gap: 8px;
+
+  .removeicon:hover,
+  .infoicon:hover{
+    fill: rgba(220, 0, 0, 0.8);
+    cursor: pointer;
+  }
+
+  .link-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 90%;
+
+    .item-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .infoicon {
+        margin-left: 18px;
+      }
+
+      label {
+        width: inherit;
+        font-weight: bold;
+
+        input[type="text"] {
+          border-radius: 4px;
+          border: none;
+          width: inherit;
+
+          &:focus {
+            appearance: none;
+            border-color: lightseagreen;
+          }
+
+          &:placeholder-shown {
+            color: grey;
+            font-size: 120%;
+          }
+        }
+      }
+    }
+
+    .item-input {
+      display: flex;
+      align-items: center;
+      width: 21rem;
+
+      input[type='text'],
+      textarea {
+        padding: 8px 12px;
+        border: 2px solid black;
+        border-radius: 2px;
+        width: inherit;
+        font-weight: bold;
+      }
+    }
+
+    .removeicon {
+      margin-left: 4px;
+    }
+  }
+
+
+
 
   .btn-add-link {
     align-self: center;
@@ -20,3 +88,6 @@
     }
   }
 }
+
+
+
