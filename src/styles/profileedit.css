@@ -1,9 +1,15 @@
 .profile-form {
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 90%;
+
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  transition-behavior: allow-discrete;
 
   input[type='text'],
   textarea {
@@ -12,24 +18,46 @@
     border-radius: 2px;
     width: inherit;
   }
-}
 
-details {
-  width: 28rem;
-  border: 1px solid black;
-  padding-left: 12px;
-  padding-bottom: 4px;
-
-
-  summary {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 2rem;
-    width: inherit;
-    padding: 4px 8px;
-    padding-bottom: 0;
-    font-size: 140%;
+  label {
     font-weight: bold;
   }
+}
+
+@starting-style {
+  .profile-form.is-open {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+.profile-form.is-open {
+
+  max-height: 500px;
+  opacity: 1;
+  width: auto;
+}
+
+#profile-btn {
+  /* appearance: none; */
+  width: 26rem;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2rem;
+  padding: 18px 18px;
+  font-size: 140%;
+  font-weight: bold;
+
+
+}
+
+.chevron {
+  font-weight: bold;
+  transition: transform 0.5s ease-out;
+}
+
+.chevron.is-open {
+  transform: rotate(90deg);
 }
