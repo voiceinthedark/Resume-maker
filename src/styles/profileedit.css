@@ -1,0 +1,35 @@
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 90%;
+
+  input[type='text'],
+  textarea {
+    padding: 8px 12px;
+    border: 2px solid black;
+    border-radius: 2px;
+    width: inherit;
+  }
+}
+
+details {
+  width: 28rem;
+  border: 1px solid black;
+  padding-left: 12px;
+  padding-bottom: 4px;
+
+
+  summary {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 2rem;
+    width: inherit;
+    padding: 4px 8px;
+    padding-bottom: 0;
+    font-size: 140%;
+    font-weight: bold;
+  }
+}
