@@ -29,6 +29,10 @@ function LinksEdit() {
     ]);
   }
 
+  function handleRemoveLink(id){
+    setLinks(prevLinks => prevLinks.filter(link => link.id !== id))
+  }
+
   return (
     <>
       <SectionMenuButton id={'links-btn'} name={'Links'} className={'btn-edit'} showForm={showForm} setShowForm={setShowForm} />
@@ -44,7 +48,7 @@ function LinksEdit() {
                   className="link-label-input"
                 />
               </label>
-              <InfoIcon className={'infoicon'} fill="gray"/>
+              <InfoIcon className={'infoicon'} fill="gray" />
             </div>
             <div className="item-input">
               <input
@@ -54,7 +58,9 @@ function LinksEdit() {
                 value={link.value}
                 onChange={(e) => handleLinkChange(link.id, 'value', e.target.value)}
               />
-             <XIcon className={'removeicon'} fill="red"/> 
+              <button className="remove-btn" onClick={() => handleRemoveLink(link.id)}>
+                <XIcon className={'removeicon'} fill="red" />
+              </button>
             </div>
           </div>
         ))}
