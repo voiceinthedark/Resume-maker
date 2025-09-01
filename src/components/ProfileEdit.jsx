@@ -11,8 +11,8 @@ function ProfileEdit() {
 
   return (
     <>
-      <SectionMenuButton showForm={showForm} setShowForm={setShowForm} />
-      <form action="" className={`profile-form ${showForm ? 'is-open' : ''}`}>
+      <SectionMenuButton className={'btn-edit'} id={'profile-btn'} name={'Profile'} showForm={showForm} setShowForm={setShowForm} />
+      <form action="" className={`formedit ${showForm ? 'is-open' : ''}`}>
         <label htmlFor="fullname" >Full Name
         </label >
         <input type="text" name="fullname" id="fullname" onChange={(e) => { setFullname(e.target.value)}} />

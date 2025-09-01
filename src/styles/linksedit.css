@@ -1,0 +1,22 @@
+#link-edit {
+  width: 90%;
+
+  .btn-add-link {
+    align-self: center;
+    appearance: none;
+    padding: 2px 4px;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: inherit;
+    font-size: 120%;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba(10, 10, 10, 0.1);
+    }
+  }
+}

@@ -35,6 +35,70 @@ h1 {
   line-height: 1.1;
 }
 
+.btn-edit {
+  /* appearance: none; */
+  width: 26rem;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2rem;
+  padding: 18px 18px;
+  font-size: 140%;
+  font-weight: bold;
+
+
+}
+
+.chevron {
+  font-weight: bold;
+  transition: transform 0.5s ease-out;
+}
+
+.chevron.is-open {
+  transform: rotate(90deg);
+}
+
+.formedit {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+  transition-behavior: allow-discrete;
+
+  input[type='text'],
+  textarea {
+    padding: 8px 12px;
+    border: 2px solid black;
+    border-radius: 2px;
+    width: inherit;
+  }
+
+  label {
+    font-weight: bold;
+  }
+}
+
+@starting-style {
+  .formedit.is-open {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+.formedit.is-open {
+
+  max-height: 500px;
+  opacity: 1;
+  width: auto;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
