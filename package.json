@@ -1,7 +1,7 @@
 {
   "name": "cv-app",
   "private": true,
-  "version": "0.1.06",
+  "version": "0.1.29",
   "type": "module",
   "scripts": {
     "dev": "vite",

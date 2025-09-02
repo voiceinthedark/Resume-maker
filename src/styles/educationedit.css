@@ -1,0 +1,64 @@
+#education-form {
+  overflow: scroll;
+
+
+  .education-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+    padding: 2px 4px;
+    width: 350px;
+
+    .item-label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: inherit;
+
+      .education-subitem {
+        width: inherit;
+        display: flex;
+
+      }
+    }
+  }
+}
+
+.remove-btn {
+  border: none;
+  background: transparent;
+
+}
+
+.removeicon {
+  transition: transform 0.3s linear;
+}
+
+.removeicon:hover {
+  fill: rgba(220, 0, 0, 0.8);
+  cursor: pointer;
+  transform: rotate(30deg);
+}
+
+
+hr {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  border: none;
+  border-top: 3px double #333333;
+  color: #333333;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  width: 100%;
+}
+
+hr::after {
+  background: white;
+  content: "🕮";
+  font-size: 150%;
+  padding: 0 4px;
+  position: relative;
+  top: -18px;
+}
