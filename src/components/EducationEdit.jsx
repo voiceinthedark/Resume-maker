@@ -27,7 +27,7 @@ function EducationEdit() {
   function handleEducationAdd(e) {
     e.preventDefault()
     const newId = `university-${Date.now()}`
-    setEducation(prevEd => [...education,
+    setEducation(prevEd => [...prevEd,
     { id: newId, university: '', speciality: '', yearStart: '', yearFinish: '' }])
   }
 

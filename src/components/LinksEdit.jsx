@@ -9,9 +9,13 @@ import GlobeIcon from "./icons/GlobeIcon"
 function LinksEdit() {
   const [showForm, setShowForm] = useState(false)
   const [links, setLinks] = useState([
+    { id: 'phone', label: 'Phone', value: ''},
+    { id: 'email', label: 'Mail', value: ''},
     { id: 'github', label: 'Github', value: '' },
     { id: 'homepage', label: 'HomePage', value: '' },
   ]);
+
+  const initialLengthOfLinks = 4
 
   function handleLinkChange(id, field, newValue) {
     setLinks(prevLinks =>
@@ -60,7 +64,7 @@ function LinksEdit() {
                 onChange={(e) => handleLinkChange(link.id, 'value', e.target.value)}
               />
 
-              {index > 1 &&
+              {index >= initialLengthOfLinks &&
                 <button className="remove-btn" onClick={() => handleRemoveLink(link.id)}>
                   <XIcon className={'removeicon'} fill="red" />
                 </button>
