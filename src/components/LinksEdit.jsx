@@ -1,9 +1,9 @@
 import SectionMenuButton from "./utils/SectionMenuButton"
 import { useState } from "react"
 import "../styles/linksedit.css"
-import PlusIcon from "../assets/PlusIcon"
-import InfoIcon from "../assets/InfoIcon"
-import XIcon from "../assets/XIcon"
+import PlusIcon from "./icons/PlusIcon"
+import InfoIcon from "./icons/InfoIcon"
+import XIcon from "./icons/XIcon"
 
 function LinksEdit() {
   const [showForm, setShowForm] = useState(false)
