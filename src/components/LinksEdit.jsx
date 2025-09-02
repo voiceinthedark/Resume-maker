@@ -4,6 +4,7 @@ import "../styles/linksedit.css"
 import PlusIcon from "./icons/PlusIcon"
 import InfoIcon from "./icons/InfoIcon"
 import XIcon from "./icons/XIcon"
+import GlobeIcon from "./icons/GlobeIcon"
 
 function LinksEdit() {
   const [showForm, setShowForm] = useState(false)
@@ -35,7 +36,7 @@ function LinksEdit() {
 
   return (
     <>
-      <SectionMenuButton id={'links-btn'} name={'Links'} className={'btn-edit'} showForm={showForm} setShowForm={setShowForm} />
+      <SectionMenuButton Icon={GlobeIcon} iconProps={{fill: 'black'}} id={'links-btn'} name={'Links'} className={'btn-edit'} showForm={showForm} setShowForm={setShowForm} />
       <form action="" id="link-edit" className={`formedit ${showForm ? 'is-open' : ''}`}>
         {links.map((link, index) => (
           <div key={link.id} className="link-item">

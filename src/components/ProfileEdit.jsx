@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import '../styles/profileedit.css'
 import SectionMenuButton from './utils/SectionMenuButton'
+import UserIcon from "./icons/UserIcon"
 
 function ProfileEdit() {
   const [showForm, setShowForm] = useState(false)
@@ -11,7 +12,7 @@ function ProfileEdit() {
 
   return (
     <>
-      <SectionMenuButton className={'btn-edit'} id={'profile-btn'} name={'Profile'} showForm={showForm} setShowForm={setShowForm} />
+      <SectionMenuButton Icon={UserIcon} iconProps={{fill: 'black'}} className={'btn-edit'} id={'profile-btn'} name={'Profile'} showForm={showForm} setShowForm={setShowForm} />
       <form action="" className={`formedit ${showForm ? 'is-open' : ''}`}>
         <label htmlFor="fullname" >Full Name
         </label >

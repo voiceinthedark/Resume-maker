@@ -1,4 +1,4 @@
-function GlobeIcon({ className, width = "24px", height = "24px", fill = "none", stroke = "currentColor" }) {
+function GlobeIcon({ className="globeicon", width = "24px", height = "24px", fill = "none", stroke = "currentColor" }) {
   return (
     <svg className={className} width={width} height={height} viewBox="0 0 24 24" fill={fill} xmlns="http://www.w3.org/2000/svg">
       <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
@@ -16,4 +16,4 @@ function GlobeIcon({ className, width = "24px", height = "24px", fill = "none", 
   )
 }
 
-export default GlobeIcon()
+export default GlobeIcon
