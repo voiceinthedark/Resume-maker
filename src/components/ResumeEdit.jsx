@@ -2,6 +2,7 @@ import LinksEdit from "./LinksEdit";
 import ProfileEdit from "./ProfileEdit";
 import '../styles/resumeedit.css'
 import EducationEdit from "./EducationEdit";
+import SkillsEdit from "./SkillsEdit";
 
 function ResumeEdit() {
 
@@ -10,6 +11,7 @@ function ResumeEdit() {
       <ProfileEdit />
       <LinksEdit />
       <EducationEdit />
+      <SkillsEdit />
     </section>
   )
 }
