@@ -11,7 +11,7 @@ function ResumeEdit({data, setData}) {
   return (
     <section className="resume-edit">
       <ProfileEdit data={data} setData={setData}/>
-      <LinksEdit />
+      <LinksEdit data={data} setData={setData}/>
       <EducationEdit />
       <SkillsEdit />
       <ExperienceEdit />

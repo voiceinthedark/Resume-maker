@@ -10,11 +10,12 @@ function App() {
       speciality: '',
       bio: '',
     },
-    links: [{
-      id: '',
-      label: '',
-      value: '',
-    },],
+    links: [
+      { id: 'phone', label: 'Phone', value: '' },
+      { id: 'email', label: 'Mail', value: '' },
+      { id: 'github', label: 'Github', value: '' },
+      { id: 'homepage', label: 'HomePage', value: '' },
+    ],
     education: [{
       id: '',
       university: '',

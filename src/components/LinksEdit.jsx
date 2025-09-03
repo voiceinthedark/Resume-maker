@@ -6,54 +6,56 @@ import InfoIcon from "./icons/InfoIcon"
 import XIcon from "./icons/XIcon"
 import GlobeIcon from "./icons/GlobeIcon"
 
-function LinksEdit() {
+function LinksEdit({ data, setData }) {
   const [showForm, setShowForm] = useState(false)
-  const [links, setLinks] = useState([
-    { id: 'phone', label: 'Phone', value: ''},
-    { id: 'email', label: 'Mail', value: ''},
-    { id: 'github', label: 'Github', value: '' },
-    { id: 'homepage', label: 'HomePage', value: '' },
-  ]);
 
   const initialLengthOfLinks = 4
 
   function handleLinkChange(id, field, newValue) {
-    setLinks(prevLinks =>
-      prevLinks.map(link =>
+    setData(prevData => ({
+      ...prevData,
+      links: prevData.links.map(link =>
         link.id === id ? { ...link, [field]: newValue } : link
       )
-    );
+    }));
   }
 
   function handleAddNewLink(e) {
     e.preventDefault();
     const newId = `link-${Date.now()}`; // Generate a unique ID
-    setLinks(prevLinks => [
-      ...prevLinks,
-      { id: newId, label: 'New Link', value: '' }, // Add a new link with a default label
-    ]);
+    setData(prevData => ({
+      ...prevData,
+      links: [
+        ...prevData.links,
+        { id: newId, label: 'New Link', value: '' },
+      ]
+    }));
   }
 
   function handleRemoveLink(id) {
-    setLinks(prevLinks => prevLinks.filter(link => link.id !== id))
+    setData(prevData => ({
+      ...prevData,
+      links: prevData.links.filter(link => link.id !== id)
+    }));
   }
 
   return (
     <>
-      <SectionMenuButton Icon={GlobeIcon} iconProps={{fill: 'black'}} id={'links-btn'} name={'Links'} className={'btn-edit'} showForm={showForm} setShowForm={setShowForm} />
+      <SectionMenuButton Icon={GlobeIcon} iconProps={{ fill: 'black' }} id={'links-btn'} name={'Links'} className={'btn-edit'} showForm={showForm} setShowForm={setShowForm} />
       <form action="" id="link-edit" className={`formedit ${showForm ? 'is-open' : ''}`}>
-        {links.map((link, index) => (
+        {data.links.map((link, index) => (
           <div key={link.id} className="link-item">
             <div className="item-label">
               <label htmlFor={link.id}>
                 <input
                   type="text"
+                  value={link.label}
                   placeholder={link.label}
                   onChange={(e) => handleLinkChange(link.id, 'label', e.target.value)}
                   className="link-label-input"
                 />
               </label>
-                <InfoIcon className={'infoicon'} fill="gray" />
+              <InfoIcon className={'infoicon'} fill="gray" />
             </div>
             <div className="item-input">
               <input
