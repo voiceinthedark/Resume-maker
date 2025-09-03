@@ -1,4 +1,4 @@
-function XIcon({ className, width = "24px", height = "24px", fill = "none", stroke = "currentColor" }) {
+function XIcon({ className="xicon", width = "24px", height = "24px", fill = "none", stroke = "currentColor" }) {
   return (
     <svg width={width} height={height} className={className} viewBox="0 0 24 24" fill={fill} xmlns="http://www.w3.org/2000/svg">
       <g id="SVGRepo_bgCarrier" strokeWidth="0">
