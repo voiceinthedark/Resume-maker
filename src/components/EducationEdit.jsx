@@ -5,34 +5,39 @@ import PlusIcon from "./icons/PlusIcon"
 import XIcon from "./icons/XIcon"
 import "../styles/educationedit.css"
 
-function EducationEdit() {
+function EducationEdit({ data, setData }) {
   const [showForm, setShowForm] = useState(false)
-  const [education, setEducation] = useState([{
-    id: 'liu', university: 'LIU', speciality: 'Computer Science', yearStart: '2006', yearFinish: '2009',
-  }])
 
   function handleEducationChange(id, field, value) {
-    setEducation(prevEducation =>
-      prevEducation.map(educ =>
+    setData(prevData => ({
+      ...prevData,
+      education: prevData.education.map(educ =>
         educ.id === id ?
           {
             ...educ,
             [field]: value,
-          } :
-          educ)
-    )
-
+          } : educ)
+    }))
   }
 
   function handleEducationAdd(e) {
     e.preventDefault()
     const newId = `university-${Date.now()}`
-    setEducation(prevEd => [...prevEd,
-    { id: newId, university: '', speciality: '', yearStart: '', yearFinish: '' }])
+    setData(prevData => ({
+      ...prevData,
+      education: [...prevData.education,
+      {
+        id: newId,
+        university: '',
+        speciality: '',
+        yearStart: '',
+        yearFinish: ''
+      }]
+    }))
   }
 
   function handleEducationRemove(id) {
-    setEducation(education.filter(educ => educ.id !== id))
+    setData(prevData => ({ ...prevData, education: prevData.education.filter(educ => educ.id !== id) }))
   }
 
   return (
@@ -46,15 +51,17 @@ function EducationEdit() {
         iconProps={{ fill: 'black' }}
       />
       <form action="" id="education-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
-        {education.map((educ, index) => (
+        {data.education.map((educ, index) => (
           <div key={educ.id} className="education-item">
             <div className="item-label">
-              <label htmlFor={educ.university}>
+              <label htmlFor={`university-${educ.id}`}>
                 University
               </label>
               <div className="education-subitem">
                 <input
                   type="text"
+                  id={`university-${educ.id}`}
+                  value={educ.university}
                   placeholder={educ.university}
                   onChange={(e) => handleEducationChange(educ.id, 'university', e.target.value)}
                   className="education-label-input"
@@ -67,26 +74,32 @@ function EducationEdit() {
               </div>
             </div>
             <div className="item-label">
-              <label htmlFor={educ.speciality}>
+              <label htmlFor={`speciality-${educ.id}`}>
                 Speciality
               </label>
               <input type="text"
+                id={`speciality-${educ.id}`}
+                value={educ.speciality}
                 placeholder={educ.speciality}
                 onChange={(e) => handleEducationChange(educ.id, 'speciality', e.target.value)} />
             </div>
             <div className="item-label">
-              <label htmlFor={educ.yearStart}>
+              <label htmlFor={`yearStart-${educ.id}`}>
                 Year start
               </label>
               <input type="text"
+                id={`yearStart-${educ.id}`}
+                value={educ.yearStart}
                 placeholder={educ.yearStart}
                 onChange={(e) => handleEducationChange(educ.id, 'yearStart', e.target.value)} />
             </div>
             <div className="item-label">
-              <label htmlFor={educ.yearFinish}>
+              <label htmlFor={`yearFinish-${educ.id}`}>
                 Year Finish
               </label>
               <input type="text"
+                id={`yearFinish-${educ.id}`}
+                value={educ.yearFinish}
                 placeholder={educ.yearFinish}
                 onChange={(e) => handleEducationChange(educ.id, 'yearFinish', e.target.value)} />
             </div>

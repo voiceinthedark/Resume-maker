@@ -16,12 +16,12 @@ function App() {
       { id: 'github', label: 'Github', value: '' },
       { id: 'homepage', label: 'HomePage', value: '' },
     ],
-    education: [{
-      id: '',
-      university: '',
-      speciality: '',
-      yearStart: '',
-      yearFinish: '',
+    education: [{ // Initialize with default education as done in EducationEdit
+      id: 'liu', 
+      university: 'LIU', 
+      speciality: 'Computer Science', 
+      yearStart: '2006', 
+      yearFinish: '2009',
     },],
     experience: [{
       id: '',
