@@ -1,7 +1,9 @@
 {
   "name": "cv-app",
+  "email": "darkrisingforce@gmail.com",
+  "homepage": "",
   "private": true,
-  "version": "0.1.48",
+  "version": "0.1.66",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,6 +11,7 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
+  "keywords": ["javascript", "react", "css", "resume", "resume-maker", "cv-maker"],
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1"

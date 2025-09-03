@@ -1,0 +1,25 @@
+#experience-form {
+  overflow: scroll;
+
+  .job-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+    padding: 2px 4px;
+    width: 350px;
+
+    .item-label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: inherit;
+
+      .job-subitem {
+        width: inherit;
+        display: flex;
+
+      }
+    }
+  }
+}

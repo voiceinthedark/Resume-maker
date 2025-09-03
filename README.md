@@ -1,8 +1,10 @@
 # Resume maker
 
-A resume maker application
+A resume maker application with React and vanilla css
 
 ## Roadmap
+
+- [ ] Add config menu to change the color of the resume
 
 ## Acknowledgments
 
