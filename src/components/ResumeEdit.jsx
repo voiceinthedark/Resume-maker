@@ -6,11 +6,11 @@ import SkillsEdit from "./SkillsEdit";
 import ExperienceEdit from "./ExperienceEdit";
 import LanguageEdit from "./LanguageEdit";
 
-function ResumeEdit() {
+function ResumeEdit({data, setData}) {
 
   return (
     <section className="resume-edit">
-      <ProfileEdit />
+      <ProfileEdit data={data} setData={setData}/>
       <LinksEdit />
       <EducationEdit />
       <SkillsEdit />

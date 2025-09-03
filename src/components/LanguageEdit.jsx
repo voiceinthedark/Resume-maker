@@ -5,6 +5,7 @@ import SectionMenuButton from "./utils/SectionMenuButton"
 import ChatIcon from "./icons/ChatIcon"
 import XIcon from "./icons/XIcon"
 import PlusIcon from "./icons/PlusIcon"
+import "../styles/languagesedit.css"
 
 function LanguageEdit() {
   const [showForm, setShowForm] = useState(false)
@@ -56,7 +57,7 @@ function LanguageEdit() {
         Icon={ChatIcon}
         iconProps={{ fill: 'black' }}
       />
-      <form action="" id="language-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
+      <form action="" id="languages-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
         {languages.length > 0 && languages.map((lang, index) => (
           <div key={lang.id} className="lang-item">
             <div className="item-label">
@@ -81,7 +82,7 @@ function LanguageEdit() {
           </div>
         ))}
         <button className="btn-add" onClick={handleLanguageAdd}>
-          Add new Skill
+          Add new Language
           <PlusIcon width="48px" height="48px" />
         </button>
       </form>

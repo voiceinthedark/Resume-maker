@@ -6,6 +6,7 @@ import { useState } from "react"
 import CollectionIcon from './icons/CollectionIcon'
 import XIcon from "./icons/XIcon"
 import PlusIcon from "./icons/PlusIcon"
+import "../styles/skillsedit.css"
 
 function SkillsEdit() {
   const [showForm, setShowForm] = useState(false)

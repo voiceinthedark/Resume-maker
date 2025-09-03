@@ -1,10 +1,50 @@
-import ProfileEdit from './components/ProfileEdit'
+import { useState } from 'react'
+import ResumePreview from './components/resume/ResumePreview'
 import ResumeEdit from './components/ResumeEdit'
 import './styles/App.css'
 
 function App() {
+  const [data, setData] = useState({
+    profile: {
+      fullname: '',
+      speciality: '',
+      bio: '',
+    },
+    links: [{
+      id: '',
+      label: '',
+      value: '',
+    },],
+    education: [{
+      id: '',
+      university: '',
+      speciality: '',
+      yearStart: '',
+      yearFinish: '',
+    },],
+    experience: [{
+      id: '',
+      job: '',
+      role: '',
+      description: '',
+      yearStart: '',
+      yearFinish: '',
+    },],
+    skills: [{
+      id: '',
+      skill: '',
+    },],
+    languages: [{
+      id: '',
+      language: '',
+    },],
+  });
+
   return (
-    <ResumeEdit />
+    <>
+      <ResumeEdit data={data} setData={setData} />
+      <ResumePreview data={data} />
+    </>
   )
 }
 
