@@ -71,7 +71,7 @@ function SkillsEdit() {
                 />
                 {index > 0 &&
                   <button className="remove-btn" onClick={() => handlesSkillRemove(skill.id)}>
-                    <XIcon className={'removeicon'} fill="red" />
+                    <XIcon className={'removeicon'} fill="black" />
                   </button>
                 }
               </div>

@@ -4,6 +4,7 @@ import '../styles/resumeedit.css'
 import EducationEdit from "./EducationEdit";
 import SkillsEdit from "./SkillsEdit";
 import ExperienceEdit from "./ExperienceEdit";
+import LanguageEdit from "./LanguageEdit";
 
 function ResumeEdit() {
 
@@ -14,6 +15,7 @@ function ResumeEdit() {
       <EducationEdit />
       <SkillsEdit />
       <ExperienceEdit />
+      <LanguageEdit />
     </section>
   )
 }

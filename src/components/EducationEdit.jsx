@@ -61,7 +61,7 @@ function EducationEdit() {
                 />
                 {index > 0 &&
                   <button className="remove-btn" onClick={() => handleEducationRemove(educ.id)}>
-                    <XIcon className={'removeicon'} fill="red" />
+                    <XIcon className={'removeicon'} fill="black" />
                   </button>
                 }
               </div>

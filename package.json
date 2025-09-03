@@ -3,7 +3,7 @@
   "email": "darkrisingforce@gmail.com",
   "homepage": "",
   "private": true,
-  "version": "0.1.66",
+  "version": "0.1.89",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -66,7 +66,7 @@ function LinksEdit() {
 
               {index >= initialLengthOfLinks &&
                 <button className="remove-btn" onClick={() => handleRemoveLink(link.id)}>
-                  <XIcon className={'removeicon'} fill="red" />
+                  <XIcon className={'removeicon'} fill="black" />
                 </button>
               }
 

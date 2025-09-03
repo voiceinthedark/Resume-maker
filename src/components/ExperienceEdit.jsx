@@ -79,7 +79,7 @@ function ExperienceEdit() {
                 />
                 {index > 0 &&
                   <button className="remove-btn" onClick={() => handleJobRemove(job.id)}>
-                    <XIcon className={'removeicon'} fill="red" />
+                    <XIcon className={'removeicon'} fill="black" />
                   </button>
                 }
               </div>
