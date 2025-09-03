@@ -7,11 +7,8 @@ import XIcon from "./icons/XIcon"
 import PlusIcon from "./icons/PlusIcon"
 import "../styles/languagesedit.css"
 
-function LanguageEdit() {
+function LanguageEdit({data, setData}) {
   const [showForm, setShowForm] = useState(false)
-  const [languages, setLanguages] = useState([{
-    id: 'lang-1', lang: '',
-  }])
 
   /**
   * @param {React.MouseEvent<HTMLButtonElement>} e 
@@ -19,7 +16,9 @@ function LanguageEdit() {
   function handleLanguageAdd(e) {
     e.preventDefault()
     const newId = `lang-${Date.now()}`
-    setLanguages(prevLanguages => [...prevLanguages, { id: newId, lang: '' }])
+    setData(prevData => ({
+      ...prevData, languages: [...prevData.languages, {id: newId, language: ''}]
+    }))
   }
 
   /**
@@ -28,11 +27,9 @@ function LanguageEdit() {
    * @param {string} value 
    * */
   function handleLanguageChange(id, value) {
-    setLanguages(prevLanguages =>
-      prevLanguages.map(lang =>
-        lang.id === id
-          ? { ...lang, lang: value }
-          : lang))
+    setData(prevData => ({...prevData, languages: prevData.languages.map(
+      lang => lang.id === id ? {...lang, language: value} : lang
+    )}))
 
   }
 
@@ -41,10 +38,9 @@ function LanguageEdit() {
    * @param {string} id 
    * */
   function handleLanguageRemove(id) {
-    setLanguages(prevLanguages =>
-      prevLanguages.filter(lang =>
-        lang.id !== id))
-
+    setData(prevData => ({
+      ...prevData, languages: prevData.languages.filter(lang => lang.id !== id)
+    }))
   }
 
   return (
@@ -58,16 +54,18 @@ function LanguageEdit() {
         iconProps={{ fill: 'black' }}
       />
       <form action="" id="languages-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
-        {languages.length > 0 && languages.map((lang, index) => (
+        {data.languages.length > 0 && data.languages.map((lang, index) => (
           <div key={lang.id} className="lang-item">
             <div className="item-label">
-              <label htmlFor={lang.lang}>
+              <label htmlFor={lang.language}>
                 Language
               </label>
               <div className="lang-subitem">
                 <input
+                  id={lang.id}
+                  value={lang.language}
                   type="text"
-                  placeholder={lang.lang}
+                  placeholder="Enter your language"
                   onChange={(e) => handleLanguageChange(lang.id, e.target.value)}
                   className="lang-label-input"
                 />

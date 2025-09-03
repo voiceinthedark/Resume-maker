@@ -14,8 +14,8 @@ function ResumeEdit({data, setData}) {
       <LinksEdit data={data} setData={setData}/>
       <EducationEdit data={data} setData={setData} />
       <SkillsEdit data={data} setData={setData} />
-      <ExperienceEdit />
-      <LanguageEdit />
+      <ExperienceEdit data={data} setData={setData} />
+      <LanguageEdit data={data} setData={setData} />
     </section>
   )
 }

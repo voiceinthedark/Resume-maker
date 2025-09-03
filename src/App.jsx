@@ -36,8 +36,8 @@ function App() {
       skill: 'Gardening',
     },],
     languages: [{
-      id: '',
-      language: '',
+      id: 'lang-1',
+      language: 'English',
     },],
   });
 
