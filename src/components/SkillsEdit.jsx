@@ -8,11 +8,8 @@ import XIcon from "./icons/XIcon"
 import PlusIcon from "./icons/PlusIcon"
 import "../styles/skillsedit.css"
 
-function SkillsEdit() {
+function SkillsEdit({ data, setData }) {
   const [showForm, setShowForm] = useState(false)
-  const [skills, setSkills] = useState([{
-    id: 'skill-1', skill: '',
-  }])
 
   /**
    * Handle skill change in the editor
@@ -20,11 +17,14 @@ function SkillsEdit() {
    * @param {string} skill 
    * */
   function handleSkillChange(id, skill) {
-    setSkills(prevSkills =>
-      prevSkills.map(prevSkill =>
-        prevSkill.id === id 
-          ? { ...prevSkill, skill: skill } 
-          : prevSkill))
+    setData(prevData =>
+    ({
+      ...prevData,
+      skills: prevData.skills.map(prevSkill =>
+        prevSkill.id === id
+          ? { ...prevSkill, skill: skill }
+          : prevSkill)
+    }))
   }
 
   /**
@@ -33,8 +33,11 @@ function SkillsEdit() {
   function handleSkillAdd(e) {
     e.preventDefault()
     const newId = `skill-${Date.now()}`
-    setSkills(prevSkills => [...prevSkills,
-    { id: newId, skill: '' }])
+    setData(prevData => ({
+      ...prevData,
+      skills: [...prevData.skills,
+      { id: newId, skill: '' }]
+    }))
 
   }
 
@@ -43,7 +46,12 @@ function SkillsEdit() {
    * @param {string} id 
    * */
   function handlesSkillRemove(id) {
-    setSkills(skills.filter(skill => skill.id !== id))
+    setData(prevData =>
+    ({
+      ...prevData,
+      skills: prevData.skills.filter(skill =>
+        skill.id !== id)
+    }))
   }
 
   return (
@@ -57,16 +65,18 @@ function SkillsEdit() {
         iconProps={{ fill: 'black' }}
       />
       <form action="" id="skills-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
-        {skills.length > 0 && skills.map((skill, index) => (
+        {data.skills.length > 0 && data.skills.map((skill, index) => (
           <div key={skill.id} className="skills-item">
             <div className="item-label">
-              <label htmlFor={skill.skill}>
+              <label htmlFor={skill.id}>
                 Skill
               </label>
               <div className="skills-subitem">
                 <input
                   type="text"
-                  placeholder={skill.id}
+                  id={skill.id}
+                  value={skill.skill}
+                  placeholder="Enter skill"
                   onChange={(e) => handleSkillChange(skill.id, e.target.value)}
                   className="skill-label-input"
                 />

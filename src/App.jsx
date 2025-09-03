@@ -32,8 +32,8 @@ function App() {
       yearFinish: '',
     },],
     skills: [{
-      id: '',
-      skill: '',
+      id: 'skill-1',
+      skill: 'Gardening',
     },],
     languages: [{
       id: '',

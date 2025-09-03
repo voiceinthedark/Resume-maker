@@ -13,7 +13,7 @@ function ResumeEdit({data, setData}) {
       <ProfileEdit data={data} setData={setData}/>
       <LinksEdit data={data} setData={setData}/>
       <EducationEdit data={data} setData={setData} />
-      <SkillsEdit />
+      <SkillsEdit data={data} setData={setData} />
       <ExperienceEdit />
       <LanguageEdit />
     </section>
