@@ -20,7 +20,11 @@ function ExperienceEdit() {
    * @param {string} value 
    * */
   function handleJobChange(id, label, value) {
-
+    setJobs(prevJobs => 
+      prevJobs.map(job => 
+        job.id === id 
+          ? {...job, [label]: value} 
+          : job))
   }
 
   /**
@@ -29,6 +33,15 @@ function ExperienceEdit() {
    * */
   function handleJobAdd(e) {
     e.preventDefault()
+    const newId = `job-${Date.now()}`
+    setJobs(prevJobs => 
+      [...prevJobs, 
+        {id: newId, 
+          job: '', 
+          role: '', 
+          description: '', 
+          yearStart: '', 
+          yearFinish: ''}])
 
   }
 
@@ -37,7 +50,7 @@ function ExperienceEdit() {
    * @param {string} id 
    * */
   function handleJobRemove(id) {
-
+    setJobs(prevJobs => prevJobs.filter(job => job.id !== id))
   }
 
   return (
