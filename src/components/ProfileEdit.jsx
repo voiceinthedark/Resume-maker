@@ -32,15 +32,31 @@ function ProfileEdit({ data, setData, darkMode }) {
       <form action="" className={`formedit ${showForm ? 'is-open' : ''}`}>
         <label htmlFor="fullname" >Full Name
         </label >
-        <input type="text" name="fullname" id="fullname" onChange={(e) => { handleProfileChange('fullname', e.target.value) }} />
+        <input 
+          type="text" 
+          name="fullname" 
+          id="fullname" 
+          value={data.profile.fullname}
+          onChange={(e) => { handleProfileChange('fullname', e.target.value) }} />
 
         <label htmlFor="speciality" >Speciality
         </label >
-        <input type="text" name="speciality" id="speciality" onChange={(e) => handleProfileChange('speciality', e.target.value)} />
+        <input 
+          type="text" 
+          name="speciality" 
+          id="speciality" 
+          value={data.profile.speciality}
+          onChange={(e) => handleProfileChange('speciality', e.target.value)} />
 
         <label htmlFor="bio" >Bio
         </label >
-        <textarea name="bio" id="bio" cols={42} rows={12} onChange={(e) => handleProfileChange('bio', e.target.value)}></textarea>
+        <textarea 
+          name="bio" 
+          id="bio" 
+          cols={42} 
+          rows={12} 
+          value={data.profile.bio}
+          onChange={(e) => handleProfileChange('bio', e.target.value)}></textarea>
       </form>
 
     </>
