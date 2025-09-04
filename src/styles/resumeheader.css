@@ -1,4 +1,28 @@
+@import url('./index.css');
+
+:root{
+  --photo-size: 180;
+  --bg-color: gray;
+}
+
 .resume-header{
   display: flex;
   justify-content: space-around;
+  background-color: var(--bg-color);
+
+.header-right{
+    position: relative;
+
+    .header-photo{
+      height: calc(var(--photo-size) * var(--scale) * 1px);
+      width: calc(var(--photo-size) * var(--scale) * 1px);
+      object-fit: cover;
+      border: 1px solid black;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -20%;
+      right: 20%;
+    }
+  }
+      
 }

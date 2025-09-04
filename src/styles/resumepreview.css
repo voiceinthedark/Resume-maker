@@ -9,6 +9,7 @@
 .resume-preview {
   display: grid;
   grid-template-columns: 2fr 3fr;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
   grid-template-areas: "header header"
     "contact profile"
     "skills education"
@@ -17,8 +18,8 @@
   border: 1px solid none;
   width: calc(var(--a4-width) * var(--scale) * 1mm);
   height: calc(var(--a4-height) * var(--scale) * 1mm);
-  padding: 4px 10px;
   box-shadow: 2px 2px 12px 15px rgb(244 255 255 / 0.2);
+  padding-top: 10px;
 }
 
 .resume-header {
