@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ResumePreview from './components/resume/ResumePreview'
 import ResumeEdit from './components/ResumeEdit'
 import './styles/App.css'
@@ -17,10 +17,10 @@ function App() {
       { id: 'homepage', label: 'HomePage', value: '' },
     ],
     education: [{ // Initialize with default education as done in EducationEdit
-      id: 'liu', 
-      university: 'LIU', 
-      speciality: 'Computer Science', 
-      yearStart: '2006', 
+      id: 'liu',
+      university: 'LIU',
+      speciality: 'Computer Science',
+      yearStart: '2006',
       yearFinish: '2009',
     },],
     experience: [{
@@ -40,7 +40,18 @@ function App() {
       language: 'English',
     },],
   });
-  const[darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
+  const [darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
+  const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+  useEffect(() => {
+    darkModeMediaQuery.addEventListener('change', (e) => {
+      if(e.matches){
+        setDarkMode(true)
+      } else{
+        setDarkMode(false)
+      }
+    })
+  })
 
 
   return (
