@@ -1,0 +1,21 @@
+.skill-preview{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  h2{
+    margin-bottom: -10px;
+  }
+
+  .skill-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding-left: 8px; */
+
+    .skill-item{
+      text-transform: capitalize;
+    }
+  }
+}

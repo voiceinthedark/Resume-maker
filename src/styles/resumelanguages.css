@@ -1,0 +1,20 @@
+.languages-section{
+  display: flex;
+  flex-direction: column;
+
+  h2{
+    margin-bottom: -10px;
+  }
+
+  .languages-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    /* padding-left: 8px; */
+
+    .languages-item{
+      text-transform: capitalize;
+    }
+  }
+}

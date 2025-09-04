@@ -1,6 +1,8 @@
 // @ts-check
 
 import Contact from "./Contact";
+import Languages from "./Languages";
+import Skill from "./Skill";
 
 /**
  * Main component to add the skills and languages sections to the resume preview
@@ -23,8 +25,10 @@ export default function Section({ type, data }) {
         t = <Contact data={data} />
         break
       case 'skills':
+        t = <Skill data={data} />
         break
       case 'languages':
+        t = <Languages data={data} />
         break
       default:
         break
