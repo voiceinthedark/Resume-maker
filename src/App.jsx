@@ -6,9 +6,9 @@ import './styles/App.css'
 function App() {
   const [data, setData] = useState({
     profile: {
-      fullname: '',
-      speciality: '',
-      bio: '',
+      fullname: 'Jim Constanza',
+      speciality: 'Software Developer',
+      bio: 'Pertinent developer',
     },
     links: [
       { id: 'phone', label: 'Phone', value: '' },
@@ -24,12 +24,12 @@ function App() {
       yearFinish: '2009',
     },],
     experience: [{
-      id: '',
-      job: '',
-      role: '',
-      description: '',
-      yearStart: '',
-      yearFinish: '',
+      id: 'exp-1',
+      job: 'Smartlb',
+      role: 'Software Developer',
+      description: 'A C# programmer working on microsoft',
+      yearStart: '2009',
+      yearFinish: '2011',
     },],
     skills: [{
       id: 'skill-1',
