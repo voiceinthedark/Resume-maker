@@ -7,7 +7,7 @@ import XIcon from "./icons/XIcon"
 import PlusIcon from "./icons/PlusIcon"
 import "../styles/languagesedit.css"
 
-function LanguageEdit({data, setData}) {
+function LanguageEdit({data, setData, darkMode}) {
   const [showForm, setShowForm] = useState(false)
 
   /**
@@ -51,7 +51,8 @@ function LanguageEdit({data, setData}) {
         showForm={showForm}
         setShowForm={setShowForm}
         Icon={ChatIcon}
-        iconProps={{ fill: 'black' }}
+        iconProps={darkMode ? {fill: 'white'} : {fill: 'black'}}
+
       />
       <form action="" id="languages-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
         {data.languages.length > 0 && data.languages.map((lang, index) => (
@@ -71,7 +72,7 @@ function LanguageEdit({data, setData}) {
                 />
                 {index > 0 &&
                   <button className="remove-btn" onClick={() => handleLanguageRemove(lang.id)}>
-                    <XIcon className={'removeicon'} fill="black" />
+                    <XIcon className={'removeicon'} fill={darkMode ? 'white': 'black'} />
                   </button>
                 }
               </div>

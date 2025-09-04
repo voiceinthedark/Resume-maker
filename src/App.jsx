@@ -40,10 +40,12 @@ function App() {
       language: 'English',
     },],
   });
+  const[darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
+
 
   return (
     <>
-      <ResumeEdit data={data} setData={setData} />
+      <ResumeEdit data={data} setData={setData} darkMode={darkMode} />
       <ResumePreview data={data} />
     </>
   )

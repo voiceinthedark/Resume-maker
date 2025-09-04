@@ -1,3 +1,4 @@
+// @ts-check
 import SectionMenuButton from "./utils/SectionMenuButton"
 import { useState } from "react"
 import "../styles/linksedit.css"
@@ -6,7 +7,7 @@ import InfoIcon from "./icons/InfoIcon"
 import XIcon from "./icons/XIcon"
 import GlobeIcon from "./icons/GlobeIcon"
 
-function LinksEdit({ data, setData }) {
+function LinksEdit({ data, setData, darkMode }) {
   const [showForm, setShowForm] = useState(false)
 
   const initialLengthOfLinks = 4
@@ -41,7 +42,15 @@ function LinksEdit({ data, setData }) {
 
   return (
     <>
-      <SectionMenuButton Icon={GlobeIcon} iconProps={{ fill: 'black' }} id={'links-btn'} name={'Links'} className={'btn-edit'} showForm={showForm} setShowForm={setShowForm} />
+      <SectionMenuButton 
+        Icon={GlobeIcon} 
+        id={'links-btn'} 
+        name={'Links'} 
+        className={'btn-edit'} 
+        showForm={showForm} 
+        setShowForm={setShowForm} 
+        iconProps={darkMode ? {fill: 'white'} : {fill: 'black'}}
+      />
       <form action="" id="link-edit" className={`formedit ${showForm ? 'is-open' : ''}`}>
         {data.links.map((link, index) => (
           <div key={link.id} className="link-item">
@@ -68,7 +77,7 @@ function LinksEdit({ data, setData }) {
 
               {index >= initialLengthOfLinks &&
                 <button className="remove-btn" onClick={() => handleRemoveLink(link.id)}>
-                  <XIcon className={'removeicon'} fill="black" />
+                  <XIcon className={'removeicon'} fill={darkMode ? 'white': 'black'} />
                 </button>
               }
 

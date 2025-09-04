@@ -1,9 +1,10 @@
+// @ts-check
 import { useState } from 'react'
 import '../styles/profileedit.css'
 import SectionMenuButton from './utils/SectionMenuButton'
 import UserIcon from "./icons/UserIcon"
 
-function ProfileEdit({ data, setData }) {
+function ProfileEdit({ data, setData, darkMode }) {
   const [showForm, setShowForm] = useState(false)
 
   function handleProfileChange(field, value) {
@@ -19,7 +20,15 @@ function ProfileEdit({ data, setData }) {
 
   return (
     <>
-      <SectionMenuButton Icon={UserIcon} iconProps={{ fill: 'black' }} className={'btn-edit'} id={'profile-btn'} name={'Profile'} showForm={showForm} setShowForm={setShowForm} />
+      <SectionMenuButton 
+        Icon={UserIcon} 
+        className={'btn-edit'} 
+        id={'profile-btn'} 
+        name={'Profile'} 
+        showForm={showForm} 
+        setShowForm={setShowForm} 
+        iconProps={darkMode ? {fill: 'white'} : {fill: 'black'}}
+      />
       <form action="" className={`formedit ${showForm ? 'is-open' : ''}`}>
         <label htmlFor="fullname" >Full Name
         </label >

@@ -6,7 +6,7 @@ import XIcon from "./icons/XIcon"
 import PlusIcon from "./icons/PlusIcon"
 import "../styles/experienceedit.css"
 
-function ExperienceEdit({ data, setData }) {
+function ExperienceEdit({ data, setData, darkMode }) {
   const [showForm, setShowForm] = useState(false)
 
 
@@ -60,7 +60,7 @@ function ExperienceEdit({ data, setData }) {
         showForm={showForm}
         setShowForm={setShowForm}
         Icon={BriefcaseIcon}
-        iconProps={{ fill: 'black' }}
+        iconProps={darkMode ? {fill: 'white'} : {fill: 'black'}}
       />
       <form action="" id="experience-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
         {data.experience.map((job, index) => (
@@ -80,7 +80,7 @@ function ExperienceEdit({ data, setData }) {
                 />
                 {index > 0 &&
                   <button className="remove-btn" onClick={() => handleJobRemove(job.id)}>
-                    <XIcon className={'removeicon'} fill="black" />
+                    <XIcon className={'removeicon'} fill={darkMode ? 'white': 'black'} />
                   </button>
                 }
               </div>

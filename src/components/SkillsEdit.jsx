@@ -1,6 +1,4 @@
 // @ts-check
-
-
 import SectionMenuButton from "./utils/SectionMenuButton"
 import { useState } from "react"
 import CollectionIcon from './icons/CollectionIcon'
@@ -8,7 +6,7 @@ import XIcon from "./icons/XIcon"
 import PlusIcon from "./icons/PlusIcon"
 import "../styles/skillsedit.css"
 
-function SkillsEdit({ data, setData }) {
+function SkillsEdit({ data, setData, darkMode }) {
   const [showForm, setShowForm] = useState(false)
 
   /**
@@ -62,7 +60,7 @@ function SkillsEdit({ data, setData }) {
         showForm={showForm}
         setShowForm={setShowForm}
         Icon={CollectionIcon}
-        iconProps={{ fill: 'black' }}
+        iconProps={darkMode ? {fill: 'white'} : {fill: 'black'}}
       />
       <form action="" id="skills-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
         {data.skills.length > 0 && data.skills.map((skill, index) => (
@@ -82,7 +80,7 @@ function SkillsEdit({ data, setData }) {
                 />
                 {index > 0 &&
                   <button className="remove-btn" onClick={() => handlesSkillRemove(skill.id)}>
-                    <XIcon className={'removeicon'} fill="black" />
+                    <XIcon className={'removeicon'} fill={darkMode ? 'white': 'black'} />
                   </button>
                 }
               </div>

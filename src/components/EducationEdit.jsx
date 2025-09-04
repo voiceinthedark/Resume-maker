@@ -5,7 +5,7 @@ import PlusIcon from "./icons/PlusIcon"
 import XIcon from "./icons/XIcon"
 import "../styles/educationedit.css"
 
-function EducationEdit({ data, setData }) {
+function EducationEdit({ data, setData, darkMode }) {
   const [showForm, setShowForm] = useState(false)
 
   function handleEducationChange(id, field, value) {
@@ -48,7 +48,7 @@ function EducationEdit({ data, setData }) {
         showForm={showForm}
         setShowForm={setShowForm}
         Icon={BookOpenIcon}
-        iconProps={{ fill: 'black' }}
+        iconProps={darkMode ? {fill: 'white'} : {fill: 'black'}}
       />
       <form action="" id="education-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
         {data.education.map((educ, index) => (
@@ -68,7 +68,7 @@ function EducationEdit({ data, setData }) {
                 />
                 {index > 0 &&
                   <button className="remove-btn" onClick={() => handleEducationRemove(educ.id)}>
-                    <XIcon className={'removeicon'} fill="black" />
+                    <XIcon className={'removeicon'} fill={darkMode ? 'white': 'black'} />
                   </button>
                 }
               </div>
