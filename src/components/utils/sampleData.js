@@ -2,6 +2,7 @@ export default {
   profile: {
     fullname: 'Jim Constanza',
     speciality: 'Software Developer',
+    photo: '',
     bio: 'Pertinent developer',
   },
   links: [
