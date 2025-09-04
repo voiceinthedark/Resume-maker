@@ -11,6 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --h1-size: 2.8;
 }
 
 a {
@@ -25,14 +26,18 @@ a:hover {
 
 body {
   margin: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+
   min-width: 320px;
   min-height: 100vh;
 }
 
+#root {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 h1 {
-  font-size: 3.2em;
+  font-size: calc(var(--h1-size) * 1em);
   line-height: 1.1;
 }
 

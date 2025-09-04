@@ -1,0 +1,42 @@
+@import url('./index.css');
+@import url('./resumeheader.css');
+:root{
+  --scale: 0.75;
+  --a4-height: 297;
+  --a4-width: 210;
+}
+
+.resume-preview {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-areas: "header header"
+    "contact profile"
+    "skills education"
+    "languages experience";
+
+  border: 1px solid none;
+  width: calc(var(--a4-width) * var(--scale) * 1mm);
+  height: calc(var(--a4-height) * var(--scale) * 1mm);
+  padding: 4px 10px;
+  box-shadow: 2px 2px 12px 15px rgb(244 255 255 / 0.2);
+}
+
+.resume-header {
+  grid-area: header;
+
+  .header-left{
+    h1{
+      font-size: calc(var(--h1-size) * var(--scale) * 1em);
+    }
+  }
+
+}
+
+
+@media (prefers-color-scheme: light) {
+  .resume-preview{
+    border-color: none;
+    box-shadow: 2px 2px 12px 15px rgb(10 10 10 / 0.2);
+  }
+
+}
