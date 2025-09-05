@@ -1,8 +1,13 @@
-.resume-edit{
+.resume-edit {
   display: flex;
   flex-direction: column;
   gap: 4px;
   align-self: start;
+  justify-self: center;
   align-items: flex-start;
+
+  .formedit {
+    width: 100%;
+  }
 
 }

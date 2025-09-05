@@ -20,6 +20,7 @@
     "side main"
     "side main"
     "side main";
+  justify-self: center;
 
   border: 1px solid none;
   width: calc(var(--a4-width) * var(--scale) * 1mm);

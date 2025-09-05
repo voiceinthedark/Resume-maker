@@ -1,5 +1,5 @@
 #link-edit {
-  width: 90%;
+  width: 100%;
   gap: 8px;
   overflow: scroll;
 
@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-    width: 90%;
+    width: inherit;
 
     .item-label {
       display: flex;
@@ -74,11 +74,9 @@
     transition: transform 0.3s linear;
   }
 
-
-
-
   .btn-add-link {
-    align-self: flex-start;
+    width: 100%;
+    align-self: center;
     appearance: none;
     padding: 2px 4px;
     border: none;
