@@ -1,4 +1,5 @@
 import Section from "./Section";
+import '../../styles/resumeside.css'
 
 export default function Side({ data }) {
 

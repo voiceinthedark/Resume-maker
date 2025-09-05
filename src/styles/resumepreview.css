@@ -1,6 +1,9 @@
 @import url('./index.css');
 @import url('./resumeheader.css');
 @import url('./resumecontact.css');
+@import url('./resumeskill.css');
+@import url('./resumelanguages.css');
+@import url('./resumeside.css');
 
 :root{
   --scale: 0.75;
@@ -13,9 +16,9 @@
   grid-template-columns: 2fr 3fr;
   grid-template-rows: 1fr 1fr 2fr 1fr;
   grid-template-areas: "header header"
-    "contact profile"
-    "skills education"
-    "languages experience";
+    "side profile"
+    "side education"
+    "side experience";
 
   border: 1px solid none;
   width: calc(var(--a4-width) * var(--scale) * 1mm);
@@ -24,6 +27,8 @@
   padding-top: 10px;
   background-color: #fff;
   color: #000;
+
+  position: fixed;
 }
 
 .resume-header {
@@ -37,9 +42,11 @@
 
 }
 
-.contact-section{
-  grid-area: contact;
+.preview-side{
+  grid-area: side;
 }
+
+
 
 @media (prefers-color-scheme: light) {
   .resume-preview{

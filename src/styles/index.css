@@ -1,3 +1,6 @@
+@import url('./resumepreview.css');
+@import url('./resumeedit.css');
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -35,6 +38,15 @@ body {
 #root {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+}
+
+.resume-edit {
+  grid-area: left;
+}
+
+.resume-preview{
+  grid-area: right;
 }
 
 h1 {
