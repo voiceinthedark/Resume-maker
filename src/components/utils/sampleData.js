@@ -6,6 +6,7 @@ export default {
     bio: 'Pertinent developer',
   },
   links: [
+    { id: 'address', label: 'Address', value: 'On mountain tops'}, 
     { id: 'phone', label: 'Phone', value: '01-222222' },
     { id: 'email', label: 'Mail', value: 'jim@jimination.com' },
     { id: 'github', label: 'Github', value: 'jimination.github.com' },

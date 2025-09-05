@@ -5,11 +5,13 @@ import MailIcon from '../icons/MailIcon'
 import GithubIcon from '../icons/GithubIcon'
 import GlobeIcon from '../icons/GlobeIcon'
 import "../../styles/resumecontact.css"
+import HomeIcon from '../icons/HomeIcon'
 
 const iconTable = new Map();
 iconTable.set('phone', <PhoneIcon fill='black' />);
 iconTable.set('email', <MailIcon fill='black' />);
 iconTable.set('github', <GithubIcon fill='black' />);
+iconTable.set('address', <HomeIcon fill='black' />);
 
 export default function Contact({ data }) {
 

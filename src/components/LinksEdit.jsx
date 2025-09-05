@@ -10,8 +10,14 @@ import GlobeIcon from "./icons/GlobeIcon"
 function LinksEdit({ data, setData, darkMode }) {
   const [showForm, setShowForm] = useState(false)
 
-  const initialLengthOfLinks = 4
+  const initialLengthOfLinks = 5
 
+  /**
+   * function to handle link changes
+   * @param {string} id - id of the link 
+   * @param {string} field - the field to be changed
+   * @param {string} newValue - the new value of the field
+   * */
   function handleLinkChange(id, field, newValue) {
     setData(prevData => ({
       ...prevData,
