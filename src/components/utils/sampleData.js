@@ -2,7 +2,7 @@ export default {
   profile: {
     fullname: 'Eren Yaegar',
     speciality: 'Titan hunter',
-    photo: null,
+    photo: '/1313942.png',
     bio: 'Seeking revenge and justice for my people',
   },
   links: [

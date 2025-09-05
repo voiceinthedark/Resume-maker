@@ -1,0 +1,17 @@
+.header-options {
+  display: flex;
+
+  .btn-options {
+    /* appearance: none; */
+    width: 13rem;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    padding: 18px 18px;
+    font-size: 140%;
+    font-weight: bold;
+  }
+
+}

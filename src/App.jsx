@@ -3,6 +3,7 @@ import ResumePreview from './components/resume/ResumePreview'
 import ResumeEdit from './components/ResumeEdit'
 import './styles/App.css'
 import initialSampleData from "./components/utils/sampleData.js"
+import PageHeader from './components/header/PageHeader.jsx'
 
 function App() {
   const [data, setData] = useState(initialSampleData);
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <>
+      <PageHeader />
       <ResumeEdit data={data} setData={setData} darkMode={darkMode} />
       <ResumePreview data={data} />
     </>

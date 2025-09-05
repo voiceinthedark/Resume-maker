@@ -1,0 +1,6 @@
+
+.page-header{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 90px;
+}

@@ -1,5 +1,6 @@
 @import url('./resumepreview.css');
 @import url('./resumeedit.css');
+@import url('./pageheader.css');
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -38,7 +39,16 @@ body {
 #root {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "left right";
+  grid-template-rows: 1fr 10fr;
+  grid-template-areas: 
+    "header header"
+    "left right";
+
+    align-items: start;
+}
+
+.page-header{
+  grid-area: header;
 }
 
 .resume-edit {
