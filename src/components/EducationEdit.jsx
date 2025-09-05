@@ -111,10 +111,11 @@ function EducationEdit({ data, setData, darkMode }) {
                 name="description"
                 id={`description-${educ.id}`}
                 cols={12} rows={5}
-                value={educ.description}></textarea>
+                value={educ.description}
+                onChange={(e) => handleEducationChange(educ.id, 'description', e.target.value)}
+              ></textarea>
 
             </div>
-
             <hr />
           </div>
         ))}
