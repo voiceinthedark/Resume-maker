@@ -3,7 +3,7 @@
   "email": "darkrisingforce@gmail.com",
   "homepage": "",
   "private": true,
-  "version": "0.13.68",
+  "version": "0.13.84",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,8 +11,17 @@
     "lint": "eslint .",
     "preview": "vite preview"
   },
-  "keywords": ["javascript", "react", "css", "resume", "resume-maker", "cv-maker"],
+  "keywords": [
+    "javascript",
+    "react",
+    "css",
+    "resume",
+    "resume-maker",
+    "cv-maker"
+  ],
   "dependencies": {
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1"
   },
