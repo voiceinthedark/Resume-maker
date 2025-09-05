@@ -48,7 +48,7 @@ function EducationEdit({ data, setData, darkMode }) {
         showForm={showForm}
         setShowForm={setShowForm}
         Icon={BookOpenIcon}
-        iconProps={darkMode ? {fill: 'white'} : {fill: 'black'}}
+        iconProps={darkMode ? { fill: 'white' } : { fill: 'black' }}
       />
       <form action="" id="education-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
         {data.education.map((educ, index) => (
@@ -68,7 +68,7 @@ function EducationEdit({ data, setData, darkMode }) {
                 />
                 {index > 0 &&
                   <button className="remove-btn" onClick={() => handleEducationRemove(educ.id)}>
-                    <XIcon className={'removeicon'} fill={darkMode ? 'white': 'black'} />
+                    <XIcon className={'removeicon'} fill={darkMode ? 'white' : 'black'} />
                   </button>
                 }
               </div>
@@ -102,6 +102,17 @@ function EducationEdit({ data, setData, darkMode }) {
                 value={educ.yearFinish}
                 placeholder={educ.yearFinish}
                 onChange={(e) => handleEducationChange(educ.id, 'yearFinish', e.target.value)} />
+            </div>
+            <div className="item-label">
+              <label htmlFor={`description-${educ.id}`}>
+                Description
+              </label>
+              <textarea
+                name="description"
+                id={`description-${educ.id}`}
+                cols={12} rows={5}
+                value={educ.description}></textarea>
+
             </div>
 
             <hr />

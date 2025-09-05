@@ -18,6 +18,7 @@ export default {
     speciality: 'Computer Science',
     yearStart: '2006',
     yearFinish: '2009',
+    description: ''
   },],
   experience: [{
     id: 'exp-1',
