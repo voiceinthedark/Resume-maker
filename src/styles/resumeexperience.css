@@ -1,0 +1,45 @@
+.preview-experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  h2 {
+    margin-bottom: -25px;
+    align-self: center;
+  }
+
+  .experience-list {
+    list-style: none;
+    padding-left: 0;
+
+    .experience-item {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      text-align: left;
+
+      .experience-item-header {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 80%;
+
+        h3 {
+          margin-bottom: -20px;
+        }
+      }
+
+      .experience-item-role {
+        font-size: 80%;
+        margin-top: -15px;
+      }
+
+      .experience-item-description {
+        font-size: 76%;
+        margin-top: -10px;
+      }
+    }
+  }
+}

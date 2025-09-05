@@ -51,7 +51,7 @@ function LinksEdit({ data, setData, darkMode }) {
       <SectionMenuButton 
         Icon={GlobeIcon} 
         id={'links-btn'} 
-        name={'Links'} 
+        name={'Contact'} 
         className={'btn-edit'} 
         showForm={showForm} 
         setShowForm={setShowForm} 

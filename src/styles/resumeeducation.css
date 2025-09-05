@@ -1,9 +1,10 @@
 .preview-education {
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   h2 {
-    margin-bottom: -10px;
+    margin-bottom: -15px;
   }
 
   .education-list {
