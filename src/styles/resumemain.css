@@ -1,0 +1,18 @@
+@import url('./resumeprofile.css');
+
+.preview-main{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: "profile"
+    "education"
+    "experience";
+  justify-items: start;
+
+  border-left: 1px solid #000;
+  padding-left: 1rem;
+}
+
+.preview-profile{
+  grid-area: profile;
+}

@@ -1,6 +1,6 @@
 import "../../styles/resumepreview.css"
-import Contact from "./Contact"
 import Header from "./Header"
+import Main from "./Main"
 import Side from "./Side"
 
 /**
@@ -12,6 +12,7 @@ function ResumePreview({data}) {
     <section className="resume-preview">
       <Header data={data} />
       <Side data={data} />
+      <Main data={data} />
     </section>
   )
 

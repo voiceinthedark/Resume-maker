@@ -4,6 +4,7 @@
 @import url('./resumeskill.css');
 @import url('./resumelanguages.css');
 @import url('./resumeside.css');
+@import url('./resumemain.css');
 
 :root{
   --scale: 0.75;
@@ -16,9 +17,9 @@
   grid-template-columns: 2fr 3fr;
   grid-template-rows: 1fr 1fr 2fr 1fr;
   grid-template-areas: "header header"
-    "side profile"
-    "side education"
-    "side experience";
+    "side main"
+    "side main"
+    "side main";
 
   border: 1px solid none;
   width: calc(var(--a4-width) * var(--scale) * 1mm);
@@ -28,7 +29,7 @@
   background-color: #fff;
   color: #000;
 
-  position: fixed;
+  position: sticky;
 }
 
 .resume-header {
@@ -44,6 +45,10 @@
 
 .preview-side{
   grid-area: side;
+}
+
+.preview-main{
+  grid-area: main;
 }
 
 
