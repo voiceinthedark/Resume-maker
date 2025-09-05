@@ -25,6 +25,10 @@
   }
 }
 
+.btn-add{
+  align-self: flex-start;
+}
+
 .remove-btn {
   border: none;
   background: transparent;

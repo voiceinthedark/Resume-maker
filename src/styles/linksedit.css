@@ -79,7 +79,7 @@
 
 
   .btn-add-link {
-    align-self: center;
+    align-self: flex-start;
     appearance: none;
     padding: 2px 4px;
     border: none;
@@ -87,7 +87,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: inherit;
     font-size: 120%;
     font-weight: 600;
     transition: background-color 0.3s ease-in-out;
