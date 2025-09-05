@@ -1,5 +1,13 @@
 .preview-profile{
+  display: flex;
+  flex-direction: column;
+
+  h2{
+    align-self: flex-start;
+    margin-bottom: -10px;
+  }
   .preview-bio{
     font-style: italic;
+    text-align: left;
   }
 }
