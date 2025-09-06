@@ -20,10 +20,17 @@ export default function ConfigEdit() {
 
   }, [style.colors.accent])
 
-useEffect(() => {
+  useEffect(() => {
     document.getElementById('root').style.setProperty('--font-color', style.colors.font)
 
   }, [style.colors.font])
+
+  useEffect(() => {
+    const preview = document.getElementById('resume-preview')
+    style.font.style === 'serif'
+      ? preview.style.fontFamily = getComputedStyle(document.documentElement).getPropertyValue('--font-serif')
+      : preview.style.fontFamily = getComputedStyle(document.documentElement).getPropertyValue('--font-sans')
+  }, [style.font.style])
 
   return (
     <section className="config-edit">
@@ -50,6 +57,19 @@ useEffect(() => {
             onChange={(e) => changeStyle('colors', 'font', e.target.value)}
           />
         </div>
+      </div>
+      <div className="config-font">
+        <button
+          onClick={(e) => changeStyle('font', 'style', 'sans-serif')}
+          style={{ 'font-family': 'sans-serif' }}>
+          Sans Serif
+        </button>
+        <button
+          onClick={(e) => changeStyle('font', 'style', 'serif')}
+          style={{ 'font-family': 'serif' }}>
+          Serif
+        </button>
+
       </div>
     </section>
   )

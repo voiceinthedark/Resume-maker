@@ -11,6 +11,8 @@
   --a4-height: 297;
   --a4-width: 210;
   --font-color: #000;
+  --font-sans: Avenir, Helvetica, Arial;
+  --font-serif: "Times new romans", serif;
 }
 
 .resume-preview {

@@ -9,3 +9,4 @@ A resume maker application with React and vanilla css
 ## Acknowledgments
 
 - [Scarlab solid icons](https://www.svgrepo.com/collection/scarlab-solid-oval-interface-icons/2)
+- [Nimbus interface icons](https://www.svgrepo.com/collection/nimbus-interface-icons/)

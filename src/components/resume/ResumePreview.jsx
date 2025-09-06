@@ -9,7 +9,7 @@ import Side from "./Side"
 function ResumePreview({data}) {
 
   return (
-    <section className="resume-preview">
+    <section id="resume-preview" className="resume-preview">
       <Header data={data} />
       <Side data={data} />
       <Main data={data} />
