@@ -38,8 +38,8 @@ body {
 
 #root {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 10fr;
+  grid-template-columns: repeat(2, minmax(50%, 1fr));
+  grid-template-rows: 6rem 10fr;
   grid-template-areas: 
     "header header"
     "left right";
@@ -57,6 +57,7 @@ body {
 
 .resume-preview {
   grid-area: right;
+  max-width: auto;
 }
 
 h1 {
