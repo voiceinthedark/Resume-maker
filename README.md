@@ -16,8 +16,8 @@ A resume and cv maker in React and vanilla css.
 
 - [x] Add config menu to change the color of the resume
 - [ ] Account for no image provided
-- [ ] Add preview scaling
-- [ ] Add photo scaling
+- [x] Add preview scaling
+- [x] Add photo scaling
 - [ ] make the page responsive
 - [ ] Add print option
 

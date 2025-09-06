@@ -42,4 +42,22 @@
     }
 
   }
+
+  .config-scale{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-self: center;
+    width: 80%;
+
+    & > .scale{
+      display: flex;
+      flex-direction: column;
+      input[type="text"]{
+        width: 3.5rem;
+        padding: 6px 12px;
+        text-align: center;
+      }
+    }
+  }
 }
