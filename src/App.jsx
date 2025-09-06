@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <PageHeader setActive={setActive} />
+      <PageHeader setActive={setActive} darkMode={darkMode} />
       {active === 'edit'
         ? <ResumeEdit
           data={data}

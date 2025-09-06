@@ -3,7 +3,7 @@ import "../../styles/downloadheader.css"
 import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas'
 
-export default function HeaderDownload() {
+export default function HeaderDownload({ darkMode }) {
 
   async function downloadPdf() {
     try {
@@ -35,7 +35,7 @@ export default function HeaderDownload() {
         className='download-btn'
         onClick={downloadPdf}
       >
-        <DownloadIcon width={48} height={48} fill='black' />
+        <DownloadIcon width={48} height={48} fill={darkMode ? 'white' : 'black'} />
       </button>
     </div>
   )
