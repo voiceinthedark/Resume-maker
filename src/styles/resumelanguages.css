@@ -7,14 +7,16 @@
   }
 
   .languages-list{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-auto-rows: minmax(20px, 1fr);
     list-style: none;
+    justify-items: start;
     /* padding-left: 8px; */
 
     .languages-item{
       text-transform: capitalize;
+      font-size: 90%;
     }
   }
 }

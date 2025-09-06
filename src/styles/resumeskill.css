@@ -16,6 +16,7 @@
 
     .skill-item{
       text-transform: capitalize;
+      font-size: 90%;
     }
   }
 }
