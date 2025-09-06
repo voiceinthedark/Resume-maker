@@ -35,7 +35,7 @@ export default function HeaderDownload() {
         className='download-btn'
         onClick={downloadPdf}
       >
-        <DownloadIcon fill='black' />
+        <DownloadIcon width={48} height={48} fill='black' />
       </button>
     </div>
   )

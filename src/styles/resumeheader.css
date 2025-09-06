@@ -2,13 +2,13 @@
 
 :root{
   --photo-size: 180;
-  --bg-color: lightgray;
+  --bg-header-color: lightgray;
 }
 
 .resume-header{
   display: flex;
   justify-content: space-around;
-  background-color: var(--bg-color);
+  background-color: var(--bg-header-color);
 
 .header-right{
     position: relative;

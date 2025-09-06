@@ -4,17 +4,19 @@ import ResumeEdit from './components/ResumeEdit'
 import './styles/App.css'
 import initialSampleData from "./components/utils/sampleData.js"
 import PageHeader from './components/header/PageHeader.jsx'
+import ConfigEdit from './components/ConfigEdit.jsx'
 
 function App() {
+  const [active, setActive] = useState('edit')
   const [data, setData] = useState(initialSampleData);
   const [darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
   const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
   useEffect(() => {
     darkModeMediaQuery.addEventListener('change', (e) => {
-      if(e.matches){
+      if (e.matches) {
         setDarkMode(true)
-      } else{
+      } else {
         setDarkMode(false)
       }
     })
@@ -22,8 +24,13 @@ function App() {
 
   return (
     <>
-      <PageHeader />
-      <ResumeEdit data={data} setData={setData} darkMode={darkMode} />
+      <PageHeader setActive={setActive} />
+      {active === 'edit'
+        ? <ResumeEdit
+          data={data}
+          setData={setData}
+          darkMode={darkMode} />
+        : <ConfigEdit /> }
       <ResumePreview data={data} />
     </>
   )

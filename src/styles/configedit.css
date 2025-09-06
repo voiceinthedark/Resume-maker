@@ -1,0 +1,22 @@
+.config-edit {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 23rem;
+  border: 2px solid black;
+
+  .config-color {
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
+
+    .font,
+    .accent {
+      width: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
