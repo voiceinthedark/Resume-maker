@@ -7,3 +7,12 @@
   width: 100%;
   position: relative;
 }
+
+@media (width <= 768px){
+  .page-header{
+    grid-template-columns: 1fr;
+    width: 90%;
+    justify-items: start;
+    margin: 0;
+  }
+}

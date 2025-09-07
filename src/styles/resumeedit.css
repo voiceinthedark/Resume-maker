@@ -11,3 +11,9 @@
   }
 
 }
+
+@media (width <= 768px){
+  .resume-edit{
+    justify-self: start;
+  }
+}

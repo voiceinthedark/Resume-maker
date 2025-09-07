@@ -9,6 +9,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -26,4 +27,16 @@
 
 .read-the-docs {
   color: #888;
+}
+
+@media (width <=768px) {
+  #root {
+    padding: 0.2rem;
+    grid-template-columns: 620px;
+    grid-template-areas: "header"
+      "edit"
+      "preview";
+    grid-template-rows: 200px 1fr 1fr;
+    margin-left: 0;
+  }
 }

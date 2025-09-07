@@ -24,3 +24,10 @@
 
   }
 }
+
+@media (width <= 768px){
+  .header-download{
+    align-items: flex-start;
+    max-width: 74%;
+  }
+}

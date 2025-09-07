@@ -20,3 +20,9 @@
     }
   }
 }
+
+@media (width <= 768px){
+  .skill-list{
+    padding-left: 1rem;
+  }
+}

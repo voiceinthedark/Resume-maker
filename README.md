@@ -18,7 +18,7 @@ Modern Cv maker with a two column layout, a header and a photo.
 ## Roadmap
 
 - [x] Add config menu to change the color of the resume
-- [ ] Account for no image provided
+- [x] Account for no image provided
 - [x] Add preview scaling
 - [x] Add photo scaling
 - [ ] make the page responsive

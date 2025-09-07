@@ -161,3 +161,37 @@ h1 {
     background-color: #f9f9f9;
   }
 }
+
+@media (width <=768px) {
+  :root {
+    --scale: 0.5;
+    --h1-size: 1.2;
+  }
+
+  body{
+    padding: 0;
+  }
+
+  #root {
+    grid-template-columns: 620px;
+    grid-template-areas: "header"
+      "edit"
+      "preview";
+    grid-template-rows: 200px 1fr 1fr;
+    margin-left: 0;
+  }
+
+  .page-header {
+    grid-area: header;
+  }
+
+  .resume-edit {
+    grid-area: edit;
+
+  }
+
+  .resume-preview {
+    grid-area: preview;
+  }
+
+}

@@ -26,3 +26,16 @@
     }
   }
 }
+
+@media (width <=768px) {
+  .contact-section {
+    .contact-list {
+      justify-content: flex-start;
+
+      .links-preview-item {
+        gap: 2px;
+      }
+    }
+  }
+
+}

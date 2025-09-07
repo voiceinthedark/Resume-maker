@@ -21,3 +21,9 @@
   }
 
 }
+
+@media (width <= 768px){
+  .header-options{
+    max-width: 100%;
+  }
+}

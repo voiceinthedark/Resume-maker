@@ -26,3 +26,18 @@
   }
       
 }
+
+@media (width <= 768px){
+  .resume-header{
+    .header-left{
+      h1{
+        font-size: 150%;
+      }
+
+      h3{
+        font-size: 110%;
+      }
+    }
+  }
+
+}

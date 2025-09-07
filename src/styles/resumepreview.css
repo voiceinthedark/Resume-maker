@@ -64,3 +64,17 @@
   }
 
 }
+
+@media (width <=768px) {
+  .resume-preview {
+    justify-self: start;
+    /* font-size: calc(120% * var(--scale)); */
+    font-size: 80%;
+    max-width: 100%;
+
+    &  h2 {
+      font-size: 110%;
+    }
+  }
+
+}

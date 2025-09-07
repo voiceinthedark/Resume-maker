@@ -90,7 +90,7 @@ export default function ConfigEdit() {
             name="page-scale"
             id="page-scale"
             value={style.scale.paperScale}
-            min={0.65}
+            min={0.5}
             max={0.85}
             step={0.05}
             onChange={(e) => changeStyle('scale', 'paperScale', e.target.value)}
