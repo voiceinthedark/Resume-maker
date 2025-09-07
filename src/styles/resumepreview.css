@@ -7,11 +7,10 @@
 @import url('./resumemain.css');
 
 :root {
-  --scale: 0.70;
   --a4-height: 297;
   --a4-width: 210;
   --font-color: #000;
-  --font-sans: Avenir, Helvetica, Arial;
+  --font-sans: system-ui, Avenir, Helvetica, Arial, sans-serif;
   --font-serif: "Times new romans", serif;
 }
 
