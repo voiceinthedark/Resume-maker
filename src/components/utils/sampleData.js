@@ -2,7 +2,7 @@ export default {
   profile: {
     fullname: 'Sylvan Prometheus',
     speciality: 'Software Developer',
-    photo: '/1313942.png',
+    photo: '/672737.jpg',
     bio: 'Chillout but determined, likes to get things done and crossing a task. Love nature, cats and dogs... And pigs too. Journey before destination',
   },
   links: [

@@ -91,7 +91,7 @@ export default function ConfigEdit() {
             id="page-scale"
             value={style.scale.paperScale}
             min={0.5}
-            max={0.85}
+            max={1.00}
             step={0.05}
             onChange={(e) => changeStyle('scale', 'paperScale', e.target.value)}
           />
@@ -103,8 +103,8 @@ export default function ConfigEdit() {
           <input type="range"
             name="image-scale"
             id="image-scale"
-            min={160}
-            max={200}
+            min={140}
+            max={210}
             step={5}
             value={style.scale.imageSize}
             onChange={(e) => changeStyle('scale', 'imageSize', e.target.value)}

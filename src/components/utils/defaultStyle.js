@@ -7,7 +7,7 @@ export default {
     style: 'sans-serif'
   },
   scale: {
-    paperScale: '0.75',
+    paperScale: '0.80',
     imageSize: '180',
   }
 }

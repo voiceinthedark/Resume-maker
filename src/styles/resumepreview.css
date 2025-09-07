@@ -7,7 +7,7 @@
 @import url('./resumemain.css');
 
 :root {
-  --scale: 0.75;
+  --scale: 0.70;
   --a4-height: 297;
   --a4-width: 210;
   --font-color: #000;
@@ -34,6 +34,7 @@
   color: var(--font-color);
   position: sticky;
   top: 20px;
+  font-size: calc(140% * var(--scale));
 }
 
 .resume-header {
@@ -69,8 +70,12 @@
   .resume-preview {
     justify-self: start;
     /* font-size: calc(120% * var(--scale)); */
-    font-size: 80%;
+    font-size: calc(120% * var(--scale));
     max-width: 100%;
+
+    & h1 {
+      font-size: calc(150% * var(--scale));
+    }
 
     &  h2 {
       font-size: 110%;
