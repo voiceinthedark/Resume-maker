@@ -40,14 +40,15 @@ body {
   display: grid;
   grid-template-columns: repeat(2, minmax(50%, 1fr));
   grid-template-rows: 6rem 10fr;
-  grid-template-areas: 
+  grid-template-areas:
     "header header"
     "left right";
 
-    align-items: start;
+  align-items: start;
+  position: relative;
 }
 
-.page-header{
+.page-header {
   grid-area: header;
 }
 

@@ -1,0 +1,145 @@
+.print-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: #222;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    fill: rgba(10, 255, 10, 0.8);
+    scale: 1.1;
+  }
+}
+
+@media screen and (prefers-color-scheme: light) {
+  .printericon {
+    background-color: #fff;
+  }
+
+  .print-btn {
+    border: none;
+    background-color: transparent;
+  }
+
+}
+
+@media print {
+
+  /* Reset html and body to ensure full page usage for printing */
+  html,
+  body {
+    width: 100% !important;
+    height: auto !important;
+    /* Allow height to expand based on content */
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    /* Prevent scrollbars on print */
+    display: block !important;
+    box-sizing: border-box !important;
+    /* Standard box model */
+  }
+
+  /* Hide everything on the page by default */
+  /* This targets all elements that are not explicitly made visible below */
+  body * {
+    display: none !important;
+    visibility: hidden !important;
+    /* Fallback for cases where display:none might not apply */
+  }
+
+  /* Make the main app root visible, but reset its layout for print */
+  /* Assuming your React app renders into <div id="root">, it needs to be visible */
+  #root {
+    display: block !important;
+    /* Override any flex/grid from screen styles */
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    visibility: visible !important;
+  }
+
+  /* Make the resume preview and its direct children visible */
+  #resume-preview {
+    display: block !important;
+    visibility: visible !important;
+
+    /* Position at the top-left of the print page, breaking out of any parent layout */
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    right: 0 !important;
+    /* Crucial for ensuring full width when absolutely positioned */
+    bottom: auto !important;
+    /* Allow content to define height */
+
+    width: 100% !important;
+    max-width: 100% !important;
+    /* Override any max-width constraints */
+    min-width: 0 !important;
+    /* Override any min-width constraints */
+    height: auto !important;
+    /* Allow content to define height */
+    min-height: auto !important;
+
+    margin: 0 !important;
+    padding: 1cm !important;
+    /* Add some default print margins for the content itself */
+    box-shadow: none !important;
+    /* Remove any shadows */
+    background-color: white !important;
+    color: black !important;
+    transform: none !important;
+    /* Remove any CSS transforms */
+
+    /* If #resume-preview itself is a grid/flex container, adapt it for print */
+    /* Example: for a vertical stack of Header, Side, Main within the resume */
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    /* Remove any gaps between internal sections */
+  }
+
+  /* Make all children of #resume-preview visible and behave as blocks for print */
+  /* This is critical for the actual resume content to appear */
+  #resume-preview *,
+  #resume-preview *:before,
+  #resume-preview *:after {
+    /* Include pseudo-elements if used */
+    display: block !important;
+    visibility: visible !important;
+    /* Reset any specific display properties of children if they were inline or part of a flex/grid that's now overridden */
+    /* For images or other media within the resume: */
+    max-width: 100% !important;
+    height: auto !important;
+    float: none !important;
+    /* Clear any floats */
+    clear: both !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    background: none !important;
+    /* Clear any background images/colors that are not essential */
+    border: none !important;
+  }
+
+  /* Hide the print button when printing */
+  .print-btn {
+    display: none !important;
+  }
+
+  /* Control page breaks for better readability within the resume */
+  /* Assuming your resume content has sections with a common class, e.g., 'resume-section' */
+  .resume-section {
+    page-break-inside: avoid !important;
+    /* Avoid breaking sections across pages */
+  }
+
+  /* Specific elements within the resume might need their own display rules if they were flex/grid items */
+  /* For example, if Header, Side, Main need to keep their internal flexbox for content layout */
+  /* #resume-preview .header, #resume-preview .side, #resume-preview .main {
+    display: flex !important; 
+    flex-direction: row !important; // or column
+  } */
+}

@@ -30,8 +30,8 @@ function App() {
           data={data}
           setData={setData}
           darkMode={darkMode} />
-        : <ConfigEdit /> }
-      <ResumePreview data={data} />
+        : <ConfigEdit />}
+      <ResumePreview data={data} darkMode={darkMode} />
     </>
   )
 }
