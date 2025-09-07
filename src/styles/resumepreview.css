@@ -78,3 +78,16 @@
   }
 
 }
+
+@media (width <= 1024px){
+  .resume-preview{
+    position: relative;
+    width: 100%;
+    font-size: 90%;
+    top: 0;
+
+    & h2{
+      font-size: 120%;
+    }
+  }
+}

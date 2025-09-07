@@ -12,3 +12,17 @@
     text-align: left;
   }
 }
+
+@media (width <= 1024px){
+  .preview-profile{
+    font-size: 90%;
+  }
+}
+
+@media (width <= 768px){
+  .preview-profile{
+    .preview-bio{
+      font-size: 97%;
+    }
+  }
+}

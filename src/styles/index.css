@@ -195,3 +195,9 @@ h1 {
   }
 
 }
+
+@media (width <= 1024px){
+  :root{
+    --scale: 0.6;
+  }
+}

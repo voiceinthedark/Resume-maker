@@ -21,7 +21,7 @@ Modern Cv maker with a two column layout, a header and a photo.
 - [x] Account for no image provided
 - [x] Add preview scaling
 - [x] Add photo scaling
-- [ ] make the page responsive
+- [x] make the page responsive
 - [ ] Add print option
 - [ ] Add localization
 - [ ] Add auto input save option

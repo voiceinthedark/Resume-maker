@@ -26,3 +26,9 @@
     padding-left: 1rem;
   }
 }
+
+@media (width <= 1024px){
+  .languages-list{
+    padding-left: 1rem;
+  }
+}
