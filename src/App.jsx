@@ -6,6 +6,7 @@ import initialSampleData from "./components/utils/sampleData.js"
 import PageHeader from './components/header/PageHeader.jsx'
 import ConfigEdit from './components/ConfigEdit.jsx'
 import AppInfo from './components/AppInfo.jsx'
+import './i18n.js'
 
 function App() {
   const [active, setActive] = useState('edit')

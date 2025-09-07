@@ -2,8 +2,10 @@ import DownloadIcon from '../icons/DownloadIcon'
 import "../../styles/downloadheader.css"
 import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas'
+import { useTranslation } from "react-i18next"
 
 export default function HeaderDownload({ darkMode }) {
+  const { t } = useTranslation('common')
 
   async function downloadPdfScreen() {
     try {
@@ -115,13 +117,13 @@ export default function HeaderDownload({ darkMode }) {
         onClick={downloadPdf}
       >
         <DownloadIcon width={48} height={48} fill={darkMode ? 'white' : 'black'} />
-        <span>Download (mobile)</span>
+        <span>{t("download_cv_mobile")}</span>
       </button>
       <button className='download-btn'
         onClick={downloadPdfScreen}
       >
         <DownloadIcon width={48} height={48} fill={darkMode ? 'white' : 'black'} />
-        <span>Download (desktop)</span>
+        <span>{t("download_cv")}</span>
       </button>
     </div>
   )
