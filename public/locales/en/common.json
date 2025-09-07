@@ -3,5 +3,9 @@
   "download_cv": "Download CV (desktop)",
   "contact": "Contact",
   "edit": "Edit",
-  "config": "Configuration"
+  "config": "Configuration",
+  "accent_color": "Accent Color",
+  "font_color": "Font Color",
+  "page_scale": "Page scale",
+  "photo_scale": "Photo scale"
 }

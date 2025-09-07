@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react"
 import defaultStyle from "./utils/defaultStyle"
 import '../styles/configedit.css'
+import { useTranslation } from "react-i18next"
 
 export default function ConfigEdit() {
   const [style, setStyle] = useState(defaultStyle)
+
+  const { t } = useTranslation('common')
 
   function changeStyle(group, label, value) {
     setStyle(prevStyle => ({
@@ -41,14 +44,14 @@ export default function ConfigEdit() {
     const preview = document.getElementById('resume-preview')
     preview.style.setProperty('--photo-size', style.scale.imageSize)
   }, [style.scale.imageSize])
-  
+
 
   return (
     <section className="config-edit">
       <div className="config-color">
         <div className="accent">
           <label htmlFor="accent-color">
-            Accent Color
+            {t("accent_color")}
           </label>
           <input type="color"
             name="accent-color"
@@ -59,7 +62,7 @@ export default function ConfigEdit() {
         </div>
         <div className="font">
           <label htmlFor="font-color">
-            Font Color
+            {t('font_color')}
           </label>
           <input type="color"
             name="font-color"
@@ -84,7 +87,7 @@ export default function ConfigEdit() {
       <div className="config-scale">
         <div className="scale">
           <label htmlFor="page-scale">
-            Page Scale
+            {t('page_scale')}
           </label>
           <input type="range"
             name="page-scale"
@@ -98,7 +101,7 @@ export default function ConfigEdit() {
         </div>
         <div className="scale">
           <label htmlFor="image-scale">
-            Photo Scale
+            {t('photo_scale')}
           </label>
           <input type="range"
             name="image-scale"

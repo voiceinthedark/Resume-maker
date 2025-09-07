@@ -4,4 +4,8 @@
   "contact": "Coordonnées",
   "edit": "Éditer",
   "config": "Configuration",
+  "accent_color": "Couleur Secondaire",
+  "font_color": "Couleur de police",
+  "page_scale": "Échelle de la page",
+  "photo_scale": "Échelle du photo",
 }
