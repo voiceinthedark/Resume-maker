@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import ResumePreview from './components/resume/ResumePreview'
 import ResumeEdit from './components/ResumeEdit'
 import './styles/App.css'
@@ -24,17 +24,21 @@ function App() {
   }, [darkModeMediaQuery])
 
   return (
-    <>
-      <PageHeader setActive={setActive} darkMode={darkMode} />
-      {active === 'edit'
-        ? <ResumeEdit
-          data={data}
-          setData={setData}
-          darkMode={darkMode} />
-        : <ConfigEdit />}
-      <ResumePreview data={data} darkMode={darkMode} />
-      <AppInfo darkMode={darkMode}/>
-    </>
+    <Suspense fallback={<div>
+      Loading Translations...
+    </div>}>
+      <>
+        <PageHeader setActive={setActive} darkMode={darkMode} />
+        {active === 'edit'
+          ? <ResumeEdit
+            data={data}
+            setData={setData}
+            darkMode={darkMode} />
+          : <ConfigEdit />}
+        <ResumePreview data={data} darkMode={darkMode} />
+        <AppInfo darkMode={darkMode} />
+      </>
+    </Suspense>
   )
 }
 
