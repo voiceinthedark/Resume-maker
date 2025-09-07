@@ -1,9 +1,10 @@
 {
-  "name": "cv-app",
+  "name": "cv maker",
   "email": "darkrisingforce@gmail.com",
   "homepage": "",
+  "author": "voiceinthedark",
   "private": true,
-  "version": "0.15.17",
+  "version": "0.15.28",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -1,0 +1,53 @@
+.appinfo{
+  position: fixed;
+  top: 10px;
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid white;
+  border-left: none ;
+  padding-right: 4px;
+  padding-left: 2px;
+  transition: background-color 0.3s ease-in;
+
+  &:hover{
+    background-color: rgba(200, 200, 200, 0.3);
+  }
+
+  & > div > a{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 4px;
+  }
+
+  .appname{
+    font-weight: bold;
+    font-size: 110%;
+  }
+
+  .appauthor{
+    font-weight: 600;
+    font-size: 105%;
+  }
+}
+
+@media (prefers-color-scheme: light){
+  .appinfo{
+    border-color: black;
+  }
+}
+
+@media (width <= 768px){
+  .appinfo{
+    position: inherit;
+    justify-content: flex-start;
+  }
+}
+
+@media (width <= 1024px){
+  .appinfo{
+    position: inherit;
+    place-items: center;
+  }
+}

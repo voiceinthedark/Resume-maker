@@ -5,6 +5,7 @@ import './styles/App.css'
 import initialSampleData from "./components/utils/sampleData.js"
 import PageHeader from './components/header/PageHeader.jsx'
 import ConfigEdit from './components/ConfigEdit.jsx'
+import AppInfo from './components/AppInfo.jsx'
 
 function App() {
   const [active, setActive] = useState('edit')
@@ -32,6 +33,7 @@ function App() {
           darkMode={darkMode} />
         : <ConfigEdit />}
       <ResumePreview data={data} darkMode={darkMode} />
+      <AppInfo darkMode={darkMode}/>
     </>
   )
 }
