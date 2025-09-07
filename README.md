@@ -5,6 +5,7 @@ A resume maker application with React and vanilla css
 ## About
 
 A resume and cv maker in React and vanilla css.
+Modern Cv maker with a two column layout, a header and a photo.
 
 ## Features
 
@@ -24,6 +25,7 @@ A resume and cv maker in React and vanilla css.
 - [ ] Add print option
 - [ ] Add localization
 - [ ] Add auto input save option
+- [ ] add classic cv layout
 
 ## Acknowledgments
 

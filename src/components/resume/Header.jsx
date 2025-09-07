@@ -9,9 +9,11 @@ export default function Header({ data }) {
         <h1>{data.profile.fullname}</h1>
         <h3>{data.profile.speciality}</h3>
       </div>
-      <div className="header-right">
-        <img className="header-photo" src={data.profile.photo} alt="profile photo" />
-      </div>
+      {data.profile.photo &&
+        <div className="header-right">
+          <img className="header-photo" src={data.profile.photo} alt="profile photo" />
+        </div>
+      }
     </header>
   )
 }
