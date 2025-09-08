@@ -7,6 +7,8 @@ import PageHeader from './components/header/PageHeader.jsx'
 import ConfigEdit from './components/ConfigEdit.jsx'
 import AppInfo from './components/AppInfo.jsx'
 import './i18n.js'
+import { I18nextProvider } from 'react-i18next'
+import i18n from './i18n.js'
 
 function App() {
   const [active, setActive] = useState('edit')
@@ -25,21 +27,24 @@ function App() {
   }, [darkModeMediaQuery])
 
   return (
-    <Suspense fallback={<div>
-      Loading Translations...
-    </div>}>
-      <>
-        <PageHeader setActive={setActive} darkMode={darkMode} />
-        {active === 'edit'
-          ? <ResumeEdit
-            data={data}
-            setData={setData}
-            darkMode={darkMode} />
-          : <ConfigEdit />}
-        <ResumePreview data={data} darkMode={darkMode} />
-        <AppInfo darkMode={darkMode} />
-      </>
-    </Suspense>
+
+    <I18nextProvider i18n={i18n}>
+      <Suspense fallback={<div>
+        Loading Translations...
+      </div>}>
+        <>
+          <PageHeader setActive={setActive} darkMode={darkMode} />
+          {active === 'edit'
+            ? <ResumeEdit
+              data={data}
+              setData={setData}
+              darkMode={darkMode} />
+            : <ConfigEdit />}
+          <ResumePreview data={data} darkMode={darkMode} />
+          <AppInfo darkMode={darkMode} />
+        </>
+      </Suspense >
+    </I18nextProvider>
   )
 }
 

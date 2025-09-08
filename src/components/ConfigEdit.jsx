@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import defaultStyle from "./utils/defaultStyle"
 import '../styles/configedit.css'
 import { useTranslation } from "react-i18next"
+import LanguageSwitcher from "./utils/LanguageSwitcher"
 
 export default function ConfigEdit() {
   const [style, setStyle] = useState(defaultStyle)
@@ -48,6 +49,10 @@ export default function ConfigEdit() {
 
   return (
     <section className="config-edit">
+        <div className="config-lang">
+          <LanguageSwitcher />
+        </div>
+
       <div className="config-color">
         <div className="accent">
           <label htmlFor="accent-color">
