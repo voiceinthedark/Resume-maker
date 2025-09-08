@@ -49,10 +49,17 @@ export default function ConfigEdit() {
 
   return (
     <section className="config-edit">
-        <div className="config-lang">
+      <label htmlFor="lang-switch">
+        {t('config_lang')}
+      </label>
+        <div id="lang-switch" className="config-lang">
           <LanguageSwitcher />
         </div>
-      <div className="config-color">
+      <hr className="rule" />
+      <label htmlFor="config-color">
+        {t('config_color')}
+      </label>
+      <div id="config-color" className="config-color">
         <div className="accent">
           <label htmlFor="accent-color">
             {t("accent_color")}
@@ -76,7 +83,12 @@ export default function ConfigEdit() {
           />
         </div>
       </div>
-      <div className="config-font">
+      <hr className="rule"/>
+
+      <label htmlFor="config-font">
+        {t('config_font')}
+      </label>
+      <div id="config-font" className="config-font">
         <button
           onClick={(e) => changeStyle('font', 'style', 'sans-serif')}
           style={{ 'font-family': 'sans-serif' }}>
@@ -88,7 +100,11 @@ export default function ConfigEdit() {
           Serif
         </button>
       </div>
-      <div className="config-scale">
+      <hr className="rule"/>
+      <label htmlFor="config-scale">
+        {t('config_scale')}
+      </label>
+      <div id="config-scale" className="config-scale">
         <div className="scale">
           <label htmlFor="page-scale">
             {t('page_scale')}
@@ -117,7 +133,6 @@ export default function ConfigEdit() {
             onChange={(e) => changeStyle('scale', 'imageSize', e.target.value)}
           />
         </div>
-
       </div>
     </section>
   )
