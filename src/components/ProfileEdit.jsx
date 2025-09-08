@@ -60,7 +60,8 @@ function ProfileEdit({ data, setData, darkMode }) {
         iconProps={darkMode ? { fill: 'white' } : { fill: 'black' }}
       />
       <form id='profile-edit' action="" className={`formedit ${showForm ? 'is-open' : ''}`}>
-        <label htmlFor="fullname" >Full Name
+        <label htmlFor="fullname" >
+          {t('fullname')}
         </label >
         <input
           type="text"
@@ -69,7 +70,8 @@ function ProfileEdit({ data, setData, darkMode }) {
           value={data.profile.fullname || ''}
           onChange={(e) => { handleProfileChange('fullname', e.target.value) }} />
 
-        <label htmlFor="speciality" >Speciality
+        <label htmlFor="speciality" >
+          {t('job')}
         </label >
         <input
           type="text"

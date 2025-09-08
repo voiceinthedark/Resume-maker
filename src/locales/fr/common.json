@@ -15,7 +15,7 @@
   "year_finish": "Année terminée",
   "description": "Description",
   "add_new_education": "Ajouter un élément",
-  "experience": "Expèrience",
+  "experience": "Expérience",
   "company": "Entreprise",
   "role": "Rôle",
   "job_description": "Description de l'emploi",
@@ -29,5 +29,7 @@
   "bio": "Biographie",
   "skills": "Compétences",
   "skill": "Compétence",
-  "add_new_skill": "Ajouter une Compétence"
+  "add_new_skill": "Ajouter une Compétence",
+  "fullname": "Nom et prénom",
+  "job": "Emploi"
 }

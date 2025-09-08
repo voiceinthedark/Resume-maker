@@ -1,0 +1,30 @@
+.enhanced-lang-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+
+  .language-switcher {
+    .language-btn {
+      background-color: #222;
+      color: #fff;
+    }
+  }
+}
+
+@media (widht <=768px) {
+  .enhanced-lang-switcher {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .enhanced-lang-switcher {
+    .language-switcher {
+      .language-btn {
+        background-color: white;
+        color: #000;
+      }
+    }
+  }
+
+}

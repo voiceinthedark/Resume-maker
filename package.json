@@ -4,7 +4,7 @@
   "homepage": "",
   "author": "voiceinthedark",
   "private": true,
-  "version": "0.16.27",
+  "version": "0.16.38",
   "type": "module",
   "scripts": {
     "dev": "vite",

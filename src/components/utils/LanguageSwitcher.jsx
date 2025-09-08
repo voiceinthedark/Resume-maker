@@ -1,5 +1,5 @@
-import React from 'react';
 import { useTranslation } from 'react-i18next';
+import "../../styles/langswitch.css"
 
 const LanguageSwitcher = () => {
   const { i18n } = useTranslation('common');
@@ -26,7 +26,6 @@ const LanguageSwitcher = () => {
             padding: '8px 12px',
             border: i18n.language === lng.code ? '2px solid #007bff' : '1px solid #ddd',
             borderRadius: '4px',
-            backgroundColor: i18n.language === lng.code ? '#f0f8ff' : 'white',
             cursor: 'pointer'
           }}
         >

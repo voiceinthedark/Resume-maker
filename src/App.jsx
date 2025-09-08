@@ -9,6 +9,7 @@ import AppInfo from './components/AppInfo.jsx'
 import './i18n.js'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n.js'
+import EnhancedLanguageSwitcher from './components/utils/EnhancedLanguageSwitcher.jsx'
 
 function App() {
   const [active, setActive] = useState('edit')
@@ -42,6 +43,7 @@ function App() {
             : <ConfigEdit />}
           <ResumePreview data={data} darkMode={darkMode} />
           <AppInfo darkMode={darkMode} />
+          <EnhancedLanguageSwitcher />
         </>
       </Suspense >
     </I18nextProvider>

@@ -1,0 +1,16 @@
+.language-switcher {
+  .language-btn {
+    background-color: #222;
+    color: #fff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .language-switcher {
+    .language-btn {
+      background-color: white;
+      color: #000;
+    }
+  }
+
+}

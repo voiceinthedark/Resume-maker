@@ -29,5 +29,7 @@
   "bio": "Bio",
   "skills": "Skills",
   "skill": "Skill",
-  "add_new_skill": "Add new skill"
+  "add_new_skill": "Add new skill",
+  "fullname": "Full name",
+  "job": "Job"
 }
