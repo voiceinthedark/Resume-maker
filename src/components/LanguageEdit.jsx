@@ -6,9 +6,11 @@ import ChatIcon from "./icons/ChatIcon"
 import XIcon from "./icons/XIcon"
 import PlusIcon from "./icons/PlusIcon"
 import "../styles/languagesedit.css"
+import { useTranslation } from "react-i18next"
 
-function LanguageEdit({data, setData, darkMode}) {
+function LanguageEdit({ data, setData, darkMode }) {
   const [showForm, setShowForm] = useState(false)
+  const { t } = useTranslation('common')
 
   /**
   * @param {React.MouseEvent<HTMLButtonElement>} e 
@@ -17,7 +19,7 @@ function LanguageEdit({data, setData, darkMode}) {
     e.preventDefault()
     const newId = `lang-${Date.now()}`
     setData(prevData => ({
-      ...prevData, languages: [...prevData.languages, {id: newId, language: ''}]
+      ...prevData, languages: [...prevData.languages, { id: newId, language: '' }]
     }))
   }
 
@@ -27,9 +29,11 @@ function LanguageEdit({data, setData, darkMode}) {
    * @param {string} value 
    * */
   function handleLanguageChange(id, value) {
-    setData(prevData => ({...prevData, languages: prevData.languages.map(
-      lang => lang.id === id ? {...lang, language: value} : lang
-    )}))
+    setData(prevData => ({
+      ...prevData, languages: prevData.languages.map(
+        lang => lang.id === id ? { ...lang, language: value } : lang
+      )
+    }))
 
   }
 
@@ -47,11 +51,11 @@ function LanguageEdit({data, setData, darkMode}) {
     <>
       <SectionMenuButton className={'btn-edit'}
         id={'language-btn'}
-        name={'Languages'}
+        name={t('languages')}
         showForm={showForm}
         setShowForm={setShowForm}
         Icon={ChatIcon}
-        iconProps={darkMode ? {fill: 'white'} : {fill: 'black'}}
+        iconProps={darkMode ? { fill: 'white' } : { fill: 'black' }}
 
       />
       <form action="" id="languages-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
@@ -59,20 +63,20 @@ function LanguageEdit({data, setData, darkMode}) {
           <div key={lang.id} className="lang-item">
             <div className="item-label">
               <label htmlFor={lang.language}>
-                Language
+                {t('language')}
               </label>
               <div className="lang-subitem">
                 <input
                   id={lang.id}
                   value={lang.language}
                   type="text"
-                  placeholder="Enter your language"
+                  placeholder={t('enter_language')}
                   onChange={(e) => handleLanguageChange(lang.id, e.target.value)}
                   className="lang-label-input"
                 />
                 {index > 0 &&
                   <button className="remove-btn" onClick={() => handleLanguageRemove(lang.id)}>
-                    <XIcon className={'removeicon'} fill={darkMode ? 'white': 'black'} />
+                    <XIcon className={'removeicon'} fill={darkMode ? 'white' : 'black'} />
                   </button>
                 }
               </div>
@@ -81,7 +85,7 @@ function LanguageEdit({data, setData, darkMode}) {
           </div>
         ))}
         <button className="btn-add" onClick={handleLanguageAdd}>
-          Add new Language
+          {t('add_language')}
           <PlusIcon width="48px" height="48px" />
         </button>
       </form>

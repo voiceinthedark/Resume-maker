@@ -47,7 +47,7 @@ function EducationEdit({ data, setData, darkMode }) {
     <>
       <SectionMenuButton className={'btn-edit'}
         id={'education-btn'}
-        name={'Education'}
+        name={t('education')}
         showForm={showForm}
         setShowForm={setShowForm}
         Icon={BookOpenIcon}

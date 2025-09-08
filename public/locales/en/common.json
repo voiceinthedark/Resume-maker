@@ -14,4 +14,13 @@
   "year_finish": "Finish Year",
   "description": "Description",
   "add_new_education": "Add new item",
+  "experience": "Experience",
+  "company": "Company",
+  "role": "Role",
+  "job_description": "Job description",
+  "add_new_job": "Add new job",
+  "education": "Education",
+  "languages": "Languages",
+  "language": "Language",
+  "add_language": "Add a language",
 }

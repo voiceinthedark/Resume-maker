@@ -5,9 +5,11 @@ import BriefcaseIcon from "./icons/BriefcaseIcon"
 import XIcon from "./icons/XIcon"
 import PlusIcon from "./icons/PlusIcon"
 import "../styles/experienceedit.css"
+import { useTranslation } from "react-i18next"
 
 function ExperienceEdit({ data, setData, darkMode }) {
   const [showForm, setShowForm] = useState(false)
+  const { t } = useTranslation('common')
 
 
   /**
@@ -56,18 +58,18 @@ function ExperienceEdit({ data, setData, darkMode }) {
     <>
       <SectionMenuButton className={'btn-edit'}
         id={'experience-btn'}
-        name={'Experience'}
+        name={t('experience')}
         showForm={showForm}
         setShowForm={setShowForm}
         Icon={BriefcaseIcon}
-        iconProps={darkMode ? {fill: 'white'} : {fill: 'black'}}
+        iconProps={darkMode ? { fill: 'white' } : { fill: 'black' }}
       />
       <form action="" id="experience-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
         {data.experience.map((job, index) => (
           <div key={job.id} className="job-item">
             <div className="item-label">
               <label htmlFor={job.id}>
-                Company
+                {t('company')}
               </label>
               <div className="job-subitem">
                 <input
@@ -80,14 +82,14 @@ function ExperienceEdit({ data, setData, darkMode }) {
                 />
                 {index > 0 &&
                   <button className="remove-btn" onClick={() => handleJobRemove(job.id)}>
-                    <XIcon className={'removeicon'} fill={darkMode ? 'white': 'black'} />
+                    <XIcon className={'removeicon'} fill={darkMode ? 'white' : 'black'} />
                   </button>
                 }
               </div>
             </div>
             <div className="item-label">
               <label htmlFor={job.id}>
-                Role
+                {t('role')}
               </label>
               <input type="text"
                 id={job.id}
@@ -97,7 +99,7 @@ function ExperienceEdit({ data, setData, darkMode }) {
             </div>
             <div className="item-label">
               <label htmlFor={job.id}>
-                Year start
+                {t('year_start')}
               </label>
               <input type="text"
                 id={job.id}
@@ -107,7 +109,7 @@ function ExperienceEdit({ data, setData, darkMode }) {
             </div>
             <div className="item-label">
               <label htmlFor={job.id}>
-                Year Finish
+                {t("year_finish")}
               </label>
               <input type="text"
                 id={job.id}
@@ -117,7 +119,7 @@ function ExperienceEdit({ data, setData, darkMode }) {
             </div>
             <div className="item-label">
               <label htmlFor={job.id}>
-                Job Description
+                {t('job_description')}
               </label>
               <textarea
                 rows={5}
@@ -132,7 +134,7 @@ function ExperienceEdit({ data, setData, darkMode }) {
           </div>
         ))}
         <button className="btn-add" onClick={handleJobAdd}>
-          Add new Job
+          {t('add_new_job')}
           <PlusIcon width="48px" height="48px" />
         </button>
       </form>
