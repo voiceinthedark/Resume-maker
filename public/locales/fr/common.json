@@ -27,4 +27,7 @@
   "profile": "Profil",
   "photo": "Photo",
   "bio": "Biographie",
+  "skills": "Compétences",
+  "skill": "Compétence",
+  "add_new_skill": "Ajouter une Compétence",
 }

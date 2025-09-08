@@ -5,9 +5,11 @@ import CollectionIcon from './icons/CollectionIcon'
 import XIcon from "./icons/XIcon"
 import PlusIcon from "./icons/PlusIcon"
 import "../styles/skillsedit.css"
+import { useTranslation } from "react-i18next"
 
 function SkillsEdit({ data, setData, darkMode }) {
   const [showForm, setShowForm] = useState(false)
+  const { t } = useTranslation('common')
 
   /**
    * Handle skill change in the editor
@@ -56,18 +58,18 @@ function SkillsEdit({ data, setData, darkMode }) {
     <>
       <SectionMenuButton className={'btn-edit'}
         id={'skills-btn'}
-        name={'Skills'}
+        name={t('skills')}
         showForm={showForm}
         setShowForm={setShowForm}
         Icon={CollectionIcon}
-        iconProps={darkMode ? {fill: 'white'} : {fill: 'black'}}
+        iconProps={darkMode ? { fill: 'white' } : { fill: 'black' }}
       />
       <form action="" id="skills-form" className={`formedit ${showForm ? 'is-open' : ''}`}>
         {data.skills.length > 0 && data.skills.map((skill, index) => (
           <div key={skill.id} className="skills-item">
             <div className="item-label">
               <label htmlFor={skill.id}>
-                Skill
+                {t('skill')}
               </label>
               <div className="skills-subitem">
                 <input
@@ -80,7 +82,7 @@ function SkillsEdit({ data, setData, darkMode }) {
                 />
                 {index > 0 &&
                   <button className="remove-btn" onClick={() => handlesSkillRemove(skill.id)}>
-                    <XIcon className={'removeicon'} fill={darkMode ? 'white': 'black'} />
+                    <XIcon className={'removeicon'} fill={darkMode ? 'white' : 'black'} />
                   </button>
                 }
               </div>
@@ -89,7 +91,7 @@ function SkillsEdit({ data, setData, darkMode }) {
           </div>
         ))}
         <button className="btn-add" onClick={handleSkillAdd}>
-          Add new Skill
+          {t('add_new_skill')}
           <PlusIcon width="48px" height="48px" />
         </button>
       </form>
