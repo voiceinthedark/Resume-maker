@@ -1,9 +1,11 @@
 import "../../styles/resumelanguages.css"
+import { useTranslation } from "react-i18next"
 
 export default function Languages({ data }) {
+  const { t } = useTranslation('common')
   return (
     <section className="languages-section">
-      <h2>Languages</h2>
+      <h2>{t('languages')}</h2>
       <ul className="languages-list">
         {data.languages.map(lang => {
           return (

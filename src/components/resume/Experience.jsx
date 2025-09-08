@@ -1,9 +1,11 @@
 import "../../styles/resumeexperience.css"
+import { useTranslation } from "react-i18next"
 
 export default function Experience({ data }) {
+  const { t } = useTranslation('common')
   return (
     <section className="preview-experience">
-      <h2>Experience</h2>
+      <h2>{t('experience')}</h2>
       <ul className="experience-list">
         {data.experience.map(exp => {
           return (

@@ -1,8 +1,11 @@
 import "../../styles/resumeeducation.css"
+import { useTranslation } from "react-i18next"
+
 export default function Education({ data }) {
+  const {t} = useTranslation('common')
   return (
     <section className="preview-education">
-      <h2>Education</h2>
+      <h2>{t('education')}</h2>
       <ul className="education-list">
         {data.education.map(educ => {
           return (
