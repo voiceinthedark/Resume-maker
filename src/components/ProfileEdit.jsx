@@ -4,9 +4,11 @@ import '../styles/profileedit.css'
 import SectionMenuButton from './utils/SectionMenuButton'
 import UserIcon from "./icons/UserIcon"
 import XIcon from './icons/XIcon'
+import { useTranslation } from 'react-i18next'
 
 function ProfileEdit({ data, setData, darkMode }) {
   const [showForm, setShowForm] = useState(false)
+  const { t } = useTranslation('common')
 
   function handleProfileChange(field, value) {
     setData(prevData => ({
@@ -52,7 +54,7 @@ function ProfileEdit({ data, setData, darkMode }) {
         Icon={UserIcon}
         className={'btn-edit'}
         id={'profile-btn'}
-        name={'Profile'}
+        name={t('profile')}
         showForm={showForm}
         setShowForm={setShowForm}
         iconProps={darkMode ? { fill: 'white' } : { fill: 'black' }}
@@ -77,7 +79,7 @@ function ProfileEdit({ data, setData, darkMode }) {
           onChange={(e) => handleProfileChange('speciality', e.target.value)} />
 
         <label htmlFor="photo" className='custom-file-upload'>
-          Photo
+          {t('photo')}
         </label>
         <input
           className='hidden-file-input'
@@ -109,19 +111,20 @@ function ProfileEdit({ data, setData, darkMode }) {
                 border: 'none',
                 background: 'transparent',
               }}>
-              <XIcon fill={darkMode ? 'white' : 'black'}/>
+              <XIcon fill={darkMode ? 'white' : 'black'} />
             </button>
           </div>
         ) : (
-          <div 
-              className="profile-photo-placeholder" 
-              style={{ marginTop: '10px' }}>
+          <div
+            className="profile-photo-placeholder"
+            style={{ marginTop: '10px' }}>
             <UserIcon fill={darkMode ? 'white' : 'black'} size="80" />
           </div>
         )}
 
 
-        <label htmlFor="bio" >Bio
+        <label htmlFor="bio" >
+          {t('bio')}
         </label >
         <textarea
           name="bio"
