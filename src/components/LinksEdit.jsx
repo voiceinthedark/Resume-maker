@@ -6,9 +6,11 @@ import PlusIcon from "./icons/PlusIcon"
 import InfoIcon from "./icons/InfoIcon"
 import XIcon from "./icons/XIcon"
 import GlobeIcon from "./icons/GlobeIcon"
+import { useTranslation } from "react-i18next"
 
 function LinksEdit({ data, setData, darkMode }) {
   const [showForm, setShowForm] = useState(false)
+  const { t } = useTranslation('common')
 
   const initialLengthOfLinks = 5
 
@@ -48,14 +50,14 @@ function LinksEdit({ data, setData, darkMode }) {
 
   return (
     <>
-      <SectionMenuButton 
-        Icon={GlobeIcon} 
-        id={'links-btn'} 
-        name={'Contact'} 
-        className={'btn-edit'} 
-        showForm={showForm} 
-        setShowForm={setShowForm} 
-        iconProps={darkMode ? {fill: 'white'} : {fill: 'black'}}
+      <SectionMenuButton
+        Icon={GlobeIcon}
+        id={'links-btn'}
+        name={t('contact')}
+        className={'btn-edit'}
+        showForm={showForm}
+        setShowForm={setShowForm}
+        iconProps={darkMode ? { fill: 'white' } : { fill: 'black' }}
       />
       <form action="" id="link-edit" className={`formedit ${showForm ? 'is-open' : ''}`}>
         {data.links.map((link, index) => (
@@ -83,7 +85,7 @@ function LinksEdit({ data, setData, darkMode }) {
 
               {index >= initialLengthOfLinks &&
                 <button className="remove-btn" onClick={() => handleRemoveLink(link.id)}>
-                  <XIcon className={'removeicon'} fill={darkMode ? 'white': 'black'} />
+                  <XIcon className={'removeicon'} fill={darkMode ? 'white' : 'black'} />
                 </button>
               }
 
@@ -91,7 +93,7 @@ function LinksEdit({ data, setData, darkMode }) {
           </div>
         ))}
         <button className="btn-add-link" onClick={handleAddNewLink}>
-          Add new link
+          {t('add_new_link')}
           <PlusIcon width="48px" height="48px" />
         </button>
       </form>
