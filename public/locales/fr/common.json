@@ -8,4 +8,10 @@
   "font_color": "Couleur de police",
   "page_scale": "Échelle de la page",
   "photo_scale": "Échelle du photo",
+  "university": "Université",
+  "speciality": "Faculté",
+  "year_start": "Année Commencée",
+  "year_finish": "Année terminée",
+  "description": "Description",
+  "add_new_education": "Ajouter un élément",
 }

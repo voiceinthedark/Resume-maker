@@ -7,5 +7,11 @@
   "accent_color": "Accent Color",
   "font_color": "Font Color",
   "page_scale": "Page scale",
-  "photo_scale": "Photo scale"
+  "photo_scale": "Photo scale",
+  "university": "University",
+  "speciality": "Faculty",
+  "year_start": "Start Year",
+  "year_finish": "Finish Year",
+  "description": "Description",
+  "add_new_education": "Add new item",
 }

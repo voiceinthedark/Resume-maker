@@ -4,9 +4,12 @@ import { useState } from "react"
 import PlusIcon from "./icons/PlusIcon"
 import XIcon from "./icons/XIcon"
 import "../styles/educationedit.css"
+import { useTranslation } from "react-i18next"
 
 function EducationEdit({ data, setData, darkMode }) {
   const [showForm, setShowForm] = useState(false)
+
+  const { t } = useTranslation('common')
 
   function handleEducationChange(id, field, value) {
     setData(prevData => ({
@@ -55,7 +58,7 @@ function EducationEdit({ data, setData, darkMode }) {
           <div key={educ.id} className="education-item">
             <div className="item-label">
               <label htmlFor={`university-${educ.id}`}>
-                University
+                {t('university')}
               </label>
               <div className="education-subitem">
                 <input
@@ -75,7 +78,7 @@ function EducationEdit({ data, setData, darkMode }) {
             </div>
             <div className="item-label">
               <label htmlFor={`speciality-${educ.id}`}>
-                Speciality
+                { t('speciality')}
               </label>
               <input type="text"
                 id={`speciality-${educ.id}`}
@@ -85,7 +88,7 @@ function EducationEdit({ data, setData, darkMode }) {
             </div>
             <div className="item-label">
               <label htmlFor={`yearStart-${educ.id}`}>
-                Year start
+                {t('year_start')}
               </label>
               <input type="text"
                 id={`yearStart-${educ.id}`}
@@ -95,7 +98,7 @@ function EducationEdit({ data, setData, darkMode }) {
             </div>
             <div className="item-label">
               <label htmlFor={`yearFinish-${educ.id}`}>
-                Year Finish
+                {t('year_finish')}
               </label>
               <input type="text"
                 id={`yearFinish-${educ.id}`}
@@ -105,7 +108,7 @@ function EducationEdit({ data, setData, darkMode }) {
             </div>
             <div className="item-label">
               <label htmlFor={`description-${educ.id}`}>
-                Description
+                {t('description')}
               </label>
               <textarea
                 name="description"
@@ -120,7 +123,7 @@ function EducationEdit({ data, setData, darkMode }) {
           </div>
         ))}
         <button className="btn-add" onClick={handleEducationAdd}>
-          Add new Education
+          {t('add_new_education')}
           <PlusIcon width="48px" height="48px" />
         </button>
       </form>

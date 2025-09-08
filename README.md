@@ -13,6 +13,7 @@ Modern Cv maker with a two column layout, a header and a photo.
 - **Configuration options:** Option to change the header background and the font color as well as font family
 - **Preview Scaling:** Option to scale the photo size as well as the overall preview
 - **Preview font change:** Option to change the font of the cv between serif and sans-serif
+- **Internationalization:** Localization in French and English
 
 
 ## Roadmap
