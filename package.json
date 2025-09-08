@@ -3,8 +3,8 @@
   "email": "darkrisingforce@gmail.com",
   "homepage": "",
   "author": "voiceinthedark",
-  "private": true,
-  "version": "0.16.38",
+  "private": false,
+  "version": "0.16.41",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -13,7 +13,10 @@ import EnhancedLanguageSwitcher from './components/utils/EnhancedLanguageSwitche
 
 function App() {
   const [active, setActive] = useState('edit')
-  const [data, setData] = useState(initialSampleData);
+  const [data, setData] = useState(() => {
+    const savedData = localStorage.getItem('resumeData');
+    return savedData ? JSON.parse(savedData) : initialSampleData;
+  });
   const [darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
   const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -26,6 +29,10 @@ function App() {
       }
     })
   }, [darkModeMediaQuery])
+
+  useEffect(() => {
+    localStorage.setItem('resumeData', JSON.stringify(data));
+  }, [data]);
 
   return (
 

@@ -37,7 +37,7 @@ i18n
     // Removed 'resources' from here, as it was not being processed correctly.
     // We will add resources via addResourceBundle in the callback instead.
 
-    lng: 'en', // Set an initial language. LanguageDetector will override this if used.
+    // lng: 'en', // Set an initial language. LanguageDetector will override this if used.
     fallbackLng: 'en', // default language
     debug: false, // Set to false for production, keep true if you want to see i18next logs
     detection: { // If LanguageDetector is used, keep its configuration
