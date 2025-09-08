@@ -8,6 +8,11 @@
   gap: 12px;
   padding: 8px 16px;
 
+  .config-lang{
+    display: flex;
+    align-self: flex-start;
+  }
+
   .config-color {
     width: inherit;
     display: flex;

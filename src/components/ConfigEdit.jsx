@@ -52,7 +52,6 @@ export default function ConfigEdit() {
         <div className="config-lang">
           <LanguageSwitcher />
         </div>
-
       <div className="config-color">
         <div className="accent">
           <label htmlFor="accent-color">
