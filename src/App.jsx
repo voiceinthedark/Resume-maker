@@ -14,6 +14,7 @@ import ClassicResume from './components/resume/classic/ClassicResume.jsx'
 
 function App() {
   const [active, setActive] = useState('edit')
+  const [template, setTemplate] = useState('modern') // Default template: modern
   const [data, setData] = useState(() => {
     const savedData = localStorage.getItem('resumeData');
     return savedData ? JSON.parse(savedData) : initialSampleData;
@@ -24,6 +25,7 @@ function App() {
   })
   const [darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
   const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
 
   useEffect(() => {
     darkModeMediaQuery.addEventListener('change', (e) => {
@@ -63,9 +65,13 @@ function App() {
             : <ConfigEdit
               save={save}
               setSave={setSave}
+              template={template}
+              setTemplate={setTemplate}
             />}
-          {/* <ResumePreview data={data} darkMode={darkMode} /> */}
-          <ClassicResume data={data} />
+          {template === 'modern'
+            ? <ResumePreview data={data} darkMode={darkMode} />
+            : <ClassicResume data={data} />
+          }
           <AppInfo darkMode={darkMode} />
           <EnhancedLanguageSwitcher />
         </>

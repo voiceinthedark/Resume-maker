@@ -8,7 +8,7 @@ import ClassicLanguage from "./ClassicLanguage";
 
 export default function ClassicResume({ data }) {
   return (
-    <main className="classic-resume">
+    <main id="classic-resume" className="classic-resume">
       <ClassicHeader data={data} />
       <ClassicProfile data={data} />
       <ClassicEducation data={data} />
