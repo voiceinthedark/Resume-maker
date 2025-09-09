@@ -3,11 +3,13 @@ import "../../../styles/classicresume.css"
 import ClassicEducation from "./ClassicEducation";
 import ClassicExperience from "./ClassicExperience";
 import ClassicSkill from "./ClassicSkill";
+import ClassicProfile from "./ClassicProfile";
 
 export default function ClassicResume({ data }) {
   return (
     <main className="classic-resume">
       <ClassicHeader data={data} />
+      <ClassicProfile data={data} />
       <ClassicEducation data={data} />
       <ClassicExperience data={data} />
       <ClassicSkill data={data} />
