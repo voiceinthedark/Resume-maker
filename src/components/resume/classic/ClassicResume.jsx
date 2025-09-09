@@ -4,6 +4,7 @@ import ClassicEducation from "./ClassicEducation";
 import ClassicExperience from "./ClassicExperience";
 import ClassicSkill from "./ClassicSkill";
 import ClassicProfile from "./ClassicProfile";
+import ClassicLanguage from "./ClassicLanguage";
 
 export default function ClassicResume({ data }) {
   return (
@@ -13,6 +14,7 @@ export default function ClassicResume({ data }) {
       <ClassicEducation data={data} />
       <ClassicExperience data={data} />
       <ClassicSkill data={data} />
+      <ClassicLanguage data={data} />
     </main>
   )
 }

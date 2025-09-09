@@ -1,5 +1,6 @@
 @import url('classicresume.css');
 
+.classic-language,
 .classic-skill {
   display: flex;
   flex-direction: column;
@@ -9,6 +10,7 @@
     margin-bottom: -25px;
   }
 
+  .classic-language-list,
   .classic-skill-list {
     width: 90%;
     list-style: none;
@@ -22,6 +24,7 @@
     line-height: 0.9;
     letter-spacing: -1px;
 
+    .classic-language-item,
     .classic-skill-item{
       text-align: start;
       width: 29%;
