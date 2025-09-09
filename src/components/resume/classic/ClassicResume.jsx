@@ -2,6 +2,7 @@ import ClassicHeader from "./ClassicHeader";
 import "../../../styles/classicresume.css"
 import ClassicEducation from "./ClassicEducation";
 import ClassicExperience from "./ClassicExperience";
+import ClassicSkill from "./ClassicSkill";
 
 export default function ClassicResume({ data }) {
   return (
@@ -9,6 +10,7 @@ export default function ClassicResume({ data }) {
       <ClassicHeader data={data} />
       <ClassicEducation data={data} />
       <ClassicExperience data={data} />
+      <ClassicSkill data={data} />
     </main>
   )
 }
