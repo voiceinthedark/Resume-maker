@@ -3,8 +3,10 @@ import defaultStyle from "./utils/defaultStyle"
 import '../styles/configedit.css'
 import { useTranslation } from "react-i18next"
 import LanguageSwitcher from "./utils/LanguageSwitcher"
+import ToggleSwitch from "./utils/ToggleSwitch"
+import AutosaveConfig from "./AutoSaveConfig"
 
-export default function ConfigEdit() {
+export default function ConfigEdit({save, setSave}) {
   const [style, setStyle] = useState(defaultStyle)
 
   const { t } = useTranslation('common')
@@ -52,9 +54,9 @@ export default function ConfigEdit() {
       <label htmlFor="lang-switch">
         {t('config_lang')}
       </label>
-        <div id="lang-switch" className="config-lang">
-          <LanguageSwitcher />
-        </div>
+      <div id="lang-switch" className="config-lang">
+        <LanguageSwitcher />
+      </div>
       <hr className="rule" />
       <label htmlFor="config-color">
         {t('config_color')}
@@ -83,7 +85,7 @@ export default function ConfigEdit() {
           />
         </div>
       </div>
-      <hr className="rule"/>
+      <hr className="rule" />
 
       <label htmlFor="config-font">
         {t('config_font')}
@@ -100,7 +102,7 @@ export default function ConfigEdit() {
           Serif
         </button>
       </div>
-      <hr className="rule"/>
+      <hr className="rule" />
       <label htmlFor="config-scale">
         {t('config_scale')}
       </label>
@@ -134,6 +136,8 @@ export default function ConfigEdit() {
           />
         </div>
       </div>
+      <hr className="rule" />
+      <AutosaveConfig save={save} setSave={setSave} />
     </section>
   )
 }

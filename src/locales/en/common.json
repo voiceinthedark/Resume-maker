@@ -8,6 +8,7 @@
   "config_font": "Change the font",
   "config_color": "Change the color",
   "config_lang": "Change the language",
+  "config_autosave": "Automatic data save?",
   "accent_color": "Accent Color",
   "font_color": "Font Color",
   "page_scale": "Page scale",

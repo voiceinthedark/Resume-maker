@@ -8,6 +8,7 @@
   "config_font": "Régler la police",
   "config_color": "Régler les Couleurs",
   "config_lang": "Régler la langue",
+  "config_autosave": "Enregistrement automatique?",
   "accent_color": "Couleur Secondaire",
   "font_color": "Couleur de police",
   "page_scale": "Échelle de la page",

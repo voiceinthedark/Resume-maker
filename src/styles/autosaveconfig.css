@@ -1,0 +1,4 @@
+.config-autosave {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,6 +1,6 @@
 # Resume maker
 
-A resume maker application with React and vanilla css
+[![Netlify Status](https://api.netlify.com/api/v1/badges/633ad63e-e3b2-479a-a918-b31044be3ade/deploy-status)](https://app.netlify.com/projects/cv-maker-gen/deploys)
 
 ## About
 

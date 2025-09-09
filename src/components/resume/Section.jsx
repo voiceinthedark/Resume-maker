@@ -21,7 +21,6 @@ export default function Section({ type, data }) {
     let t;
     switch (type) {
       case 'contact':
-        console.log('found contact')
         t = <Contact data={data} />
         break
       case 'skills':

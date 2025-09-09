@@ -17,6 +17,10 @@ function App() {
     const savedData = localStorage.getItem('resumeData');
     return savedData ? JSON.parse(savedData) : initialSampleData;
   });
+  const [save, setSave] = useState(() => {
+    const autosave = localStorage.getItem('autosave')
+    return autosave ? JSON.parse(autosave) : true
+  })
   const [darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
   const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
 
@@ -31,8 +35,15 @@ function App() {
   }, [darkModeMediaQuery])
 
   useEffect(() => {
-    localStorage.setItem('resumeData', JSON.stringify(data));
+    if (save) {
+      console.log('saving to local storage')
+      localStorage.setItem('resumeData', JSON.stringify(data));
+    }
   }, [data]);
+
+  useEffect(() => {
+    localStorage.setItem('autosave', JSON.stringify(save))
+  }, [save])
 
   return (
 
@@ -46,8 +57,12 @@ function App() {
             ? <ResumeEdit
               data={data}
               setData={setData}
-              darkMode={darkMode} />
-            : <ConfigEdit />}
+              darkMode={darkMode}
+            />
+            : <ConfigEdit
+              save={save}
+              setSave={setSave}
+            />}
           <ResumePreview data={data} darkMode={darkMode} />
           <AppInfo darkMode={darkMode} />
           <EnhancedLanguageSwitcher />
