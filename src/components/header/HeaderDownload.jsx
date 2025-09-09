@@ -4,13 +4,16 @@ import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas'
 import { useTranslation } from "react-i18next"
 
-export default function HeaderDownload({ darkMode }) {
+export default function HeaderDownload({ template, darkMode }) {
   const { t } = useTranslation('common')
 
   async function downloadPdfScreen() {
     try {
       const doc = new jsPDF('p', 'mm', 'a4')
-      const resume = document.querySelector('.resume-preview')
+
+      const resume = template === 'modern'
+        ? document.querySelector('.resume-preview')
+        : document.querySelector('.classic-resume')
 
       if (!resume) {
         console.error('Resume preview element not found.');
@@ -42,7 +45,9 @@ export default function HeaderDownload({ darkMode }) {
   async function downloadPdf() {
     try {
       const doc = new jsPDF('p', 'mm', 'a4')
-      const resume = document.querySelector('.resume-preview')
+      const resume = template === 'modern'
+        ? document.querySelector('.resume-preview')
+        : document.querySelector('.classic-resume')
 
       if (!resume) {
         console.error('Resume preview element not found.');

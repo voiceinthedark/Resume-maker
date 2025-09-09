@@ -55,7 +55,11 @@ function App() {
         Loading Translations...
       </div>}>
         <>
-          <PageHeader setActive={setActive} darkMode={darkMode} />
+          <PageHeader 
+            setActive={setActive} 
+            darkMode={darkMode} 
+            template={template}
+          />
           {active === 'edit'
             ? <ResumeEdit
               data={data}
