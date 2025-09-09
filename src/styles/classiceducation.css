@@ -1,4 +1,5 @@
 @import url('./classicresume.css');
+.classic-experience,
 .classic-education{
   display: flex;
   flex-direction: column;
@@ -8,16 +9,19 @@
   padding-left: 20px;
   
 
+  .classic-experience-item,
   .classic-education-item{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     p{
       text-align: left;
       font-size: 80%;
       margin-top: 0px;
     }
 
+    .experience-date,
     .education-date{
       display: flex;
       align-items: center;
