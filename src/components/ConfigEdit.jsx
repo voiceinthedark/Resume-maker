@@ -32,21 +32,28 @@ export default function ConfigEdit({ save, setSave, template, setTemplate }) {
   }, [style.colors.font])
 
   useEffect(() => {
-    const preview = template === 'modern' 
-      ? document.getElementById('resume-preview') 
+    const preview = template === 'modern'
+      ? document.getElementById('resume-preview')
       : document.getElementById('classic-resume')
+
     style.font.style === 'serif'
       ? preview.style.fontFamily = getComputedStyle(document.documentElement).getPropertyValue('--font-serif')
       : preview.style.fontFamily = getComputedStyle(document.documentElement).getPropertyValue('--font-sans')
   }, [style.font.style])
 
   useEffect(() => {
-    const preview = document.getElementById('resume-preview')
+    const preview = template === 'modern'
+      ? document.getElementById('resume-preview')
+      : document.getElementById('classic-resume')
+
     preview.style.setProperty('--scale', style.scale.paperScale)
   }, [style.scale.paperScale])
 
   useEffect(() => {
-    const preview = document.getElementById('resume-preview')
+    const preview = template === 'modern'
+      ? document.getElementById('resume-preview')
+      : document.getElementById('classic-resume')
+
     preview.style.setProperty('--photo-size', style.scale.imageSize)
   }, [style.scale.imageSize])
 

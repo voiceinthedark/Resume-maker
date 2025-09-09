@@ -4,7 +4,8 @@
 
 ## About
 
-Modern Cv maker with a two column layout, a header and a photo.
+Modern Cv maker with two templates, a modern two columns layout, and a traditional linear resume.
+Configurable layouts, and easy to use and navigate.
 
 ## Features
 
@@ -14,6 +15,8 @@ Modern Cv maker with a two column layout, a header and a photo.
 - **Preview font change:** Option to change the font of the cv between serif and sans-serif
 - **Internationalization:** Localization in French and English
 - **Auto-save data:** User input is saved so that work isn't lost in case of network problems
+- **Auto-save choice:** User can opt to not save data on local storage
+- **Different templates:** User can choose between different templates, modern or traditional, input is carried over to both options
 
 
 ## Roadmap
@@ -22,10 +25,17 @@ Modern Cv maker with a two column layout, a header and a photo.
 - [x] Account for no image provided
 - [x] Add preview scaling
 - [x] Add photo scaling
-- [x] make the page responsive
+- [x] Make the page responsive
 - [x] Add localization
 - [x] Add auto input save option
-- [ ] add classic cv layout
+- [x] Add classic cv layout
+
+## TODO
+
+- [x] ! Fix the print styling when on mobile 
+- [ ] Streamline and refactor the configuration component 
+- [ ] Add styling to font choice to make it more obvious what font is active
+- [ ] Personal config choices to be saved in local storage 
 
 ## Acknowledgments
 

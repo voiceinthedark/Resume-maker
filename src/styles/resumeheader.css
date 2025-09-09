@@ -1,19 +1,19 @@
 @import url('./index.css');
 
-:root{
+:root {
   --photo-size: 180;
   --bg-header-color: lightgray;
 }
 
-.resume-header{
+.resume-header {
   display: flex;
   justify-content: space-around;
   background-color: var(--bg-header-color);
 
-.header-right{
+  .header-right {
     position: relative;
 
-    .header-photo{
+    .header-photo {
       height: calc(var(--photo-size) * var(--scale) * 1px);
       width: calc(var(--photo-size) * var(--scale) * 1px);
       object-fit: cover;
@@ -24,17 +24,19 @@
       right: 20%;
     }
   }
-      
+
 }
 
-@media (width <= 768px){
-  .resume-header{
-    .header-left{
-      h1{
+@media (width <=768px) {
+  .resume-header {
+    max-height: 150px;
+
+    .header-left {
+      h1 {
         font-size: 150%;
       }
 
-      h3{
+      h3 {
         font-size: 110%;
       }
     }

@@ -33,7 +33,7 @@
   color: var(--font-color);
   position: sticky;
   top: 20px;
-  font-size: calc(140% * var(--scale));
+  font-size: calc(130% * var(--scale));
 }
 
 .resume-header {
