@@ -1,9 +1,13 @@
 import "../../../styles/classiceducation.css"
 import CalendarIcon from "../../icons/CalendarIcon"
+import { useTranslation } from "react-i18next"
+
 export default function ClassicExperience({ data }) {
+  const {t} = useTranslation('common')
+
   return (
     <section className="classic-experience">
-      <h2>Experience</h2>
+      <h2>{t('experience')}</h2>
       <hr />
       {data.experience.map(exp => {
         return (
