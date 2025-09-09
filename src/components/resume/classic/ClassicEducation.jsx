@@ -11,7 +11,7 @@ export default function ClassicEducation({ data }) {
       <hr />
       {data.education.map(educ => {
         return (
-          <div className="classic-education-item">
+          <div key={educ.id} className="classic-education-item">
             <h3>{educ.university}</h3>
             <h4>{educ.speciality}</h4>
             <span className="education-date">

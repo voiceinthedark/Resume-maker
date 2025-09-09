@@ -11,7 +11,7 @@ export default function ClassicExperience({ data }) {
       <hr />
       {data.experience.map(exp => {
         return (
-          <div className="classic-experience-item">
+          <div key={exp.id} className="classic-experience-item">
             <h3>{exp.job}</h3>
             <h4>{exp.role}</h4>
             <span className="experience-date">

@@ -9,7 +9,7 @@ export default function ClassicHeader({ data }) {
         <span>{data.profile.speciality} &#8226;</span>
         {data.links.map((l, i) => {
           return (
-            <span>{l.value} {i < data.links.length - 1 ? <span>&#8226;</span> : ''} </span>
+            <span key={l.id}>{l.value} {i < data.links.length - 1 ? <span>&#8226;</span> : ''} </span>
           )
         })}
       </div>
