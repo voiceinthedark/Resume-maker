@@ -1,0 +1,14 @@
+.classic-header{
+
+  .header-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: -20px;
+    font-size: 80%;
+    line-height: 0.8;
+    letter-spacing: -1px;
+  }
+}

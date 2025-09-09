@@ -10,6 +10,7 @@ import './i18n.js'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n.js'
 import EnhancedLanguageSwitcher from './components/utils/EnhancedLanguageSwitcher.jsx'
+import ClassicResume from './components/resume/classic/ClassicResume.jsx'
 
 function App() {
   const [active, setActive] = useState('edit')
@@ -63,7 +64,8 @@ function App() {
               save={save}
               setSave={setSave}
             />}
-          <ResumePreview data={data} darkMode={darkMode} />
+          {/* <ResumePreview data={data} darkMode={darkMode} /> */}
+          <ClassicResume data={data} />
           <AppInfo darkMode={darkMode} />
           <EnhancedLanguageSwitcher />
         </>

@@ -1,0 +1,44 @@
+@import url('./index.css');
+
+:root {
+  --a4-height: 297;
+  --a4-width: 210;
+  --font-color: #000;
+  --font-sans: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-serif: "Times new romans", serif;
+}
+
+.classic-resume {
+  display: flex;
+  flex-direction: column;
+  width: calc(var(--a4-width) * var(--scale) * 1mm);
+  height: calc(var(--a4-height) * var(--scale) * 1mm);
+  box-shadow: 2px 2px 12px 15px rgb(244 255 255 / 0.2);
+  padding-top: 10px;
+  background-color: #fff;
+  color: var(--font-color);
+  position: sticky;
+  top: 20px;
+  font-size: calc(130% * var(--scale));
+
+  h1{
+    font-size: 1.2rem;
+  }
+  hr{
+    border-top: 1px solid black;
+    width: 80%;
+  }
+  hr::after{
+    content: '';
+  }
+
+}
+
+
+@media (prefers-color-scheme: light) {
+  .classic-resume {
+    border-color: none;
+    box-shadow: 2px 2px 12px 15px rgb(10 10 10 / 0.2);
+  }
+
+}
