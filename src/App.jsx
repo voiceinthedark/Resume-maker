@@ -14,15 +14,21 @@ import ClassicResume from './components/resume/classic/ClassicResume.jsx'
 
 function App() {
   const [active, setActive] = useState('edit')
-  const [template, setTemplate] = useState('modern') // Default template: modern
+  const [template, setTemplate] = useState(() =>{
+    const savedTemplate = localStorage.getItem('template')
+    return savedTemplate !== null ? JSON.parse(savedTemplate) : 'modern'
+  }) // Default template: modern
+
   const [data, setData] = useState(() => {
     const savedData = localStorage.getItem('resumeData');
     return savedData ? JSON.parse(savedData) : initialSampleData;
   });
+
   const [save, setSave] = useState(() => {
     const autosave = localStorage.getItem('autosave')
     return autosave ? JSON.parse(autosave) : true
   })
+
   const [darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
 
   const [style, setStyle] = useState(() => {
@@ -100,6 +106,10 @@ function App() {
       preview.style.setProperty('--photo-size', style.scale.imageSize)
     }
   }, [style.scale.imageSize, template]) // template dependency added
+
+  useEffect(() =>{
+    localStorage.setItem('template', JSON.stringify(template))
+  }, [template])
 
 
 

@@ -19,7 +19,6 @@ export default function ConfigEdit({ style, setStyle, save, setSave, template, s
     }))
   }
 
-
   return (
     <section className="config-edit">
       <label htmlFor="lang-switch">
