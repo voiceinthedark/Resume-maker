@@ -1,4 +1,9 @@
+// @ts-check
+
+import { useTranslation } from "react-i18next"
+
 export default function SwitchTemplate({ template, setTemplate }) {
+  const { t } = useTranslation('common')
 
   const templates = [
     { id: 'modern', name: "Modern", val: 'modern' },
@@ -8,7 +13,7 @@ export default function SwitchTemplate({ template, setTemplate }) {
   return (
     <section className="config-template">
       <label htmlFor="template">
-        Choose template type
+        {t('choose_template')}
       </label>
       <div className="template">
         {templates.map(t => {

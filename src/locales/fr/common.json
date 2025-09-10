@@ -36,5 +36,6 @@
   "skill": "Compétence",
   "add_new_skill": "Ajouter une Compétence",
   "fullname": "Nom et prénom",
-  "job": "Emploi"
+  "job": "Emploi",
+  "choose_template": "Choisissez le modèle"
 }

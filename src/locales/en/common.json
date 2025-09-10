@@ -36,5 +36,6 @@
   "skill": "Skill",
   "add_new_skill": "Add new skill",
   "fullname": "Full name",
-  "job": "Job"
+  "job": "Job",
+  "choose_template": "Choose template"
 }

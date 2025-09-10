@@ -16,6 +16,7 @@ Configurable layouts, and easy to use and navigate.
 - **Internationalization:** Localization in French and English
 - **Auto-save data:** User input is saved so that work isn't lost in case of network problems
 - **Auto-save choice:** User can opt to not save data on local storage
+- **Auto-save of user prefenreces:** Use configuration settings are saved per user
 - **Different templates:** User can choose between different templates, modern or traditional, input is carried over to both options
 
 
@@ -33,7 +34,7 @@ Configurable layouts, and easy to use and navigate.
 ## TODO
 
 - [x] ! Fix the print styling when on mobile 
-- [ ] Streamline and refactor the configuration component 
+- [x] Streamline and refactor the configuration component 
 - [x] Add styling to font choice to make it more obvious what font is active
 - [x] Personal config choices to be saved in local storage 
 

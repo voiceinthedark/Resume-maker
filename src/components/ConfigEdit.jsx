@@ -1,13 +1,14 @@
 import '../styles/configedit.css'
-import { useTranslation } from "react-i18next"
 import LanguageSwitcher from "./utils/LanguageSwitcher"
 import AutosaveConfig from "./AutoSaveConfig"
 import SwitchTemplate from "./utils/SwitchTemplates"
+import ConfigColors from './utils/ConfigColors'
+import ConfigFonts from './utils/ConfigFonts'
+import ConfigScale from './utils/ConfigScale'
 
 export default function ConfigEdit({ style, setStyle, save, setSave, template, setTemplate }) {
 
 
-  const { t } = useTranslation('common')
 
   function changeStyle(group, label, value) {
     setStyle(prevStyle => ({
@@ -21,107 +22,16 @@ export default function ConfigEdit({ style, setStyle, save, setSave, template, s
 
   return (
     <section className="config-edit">
-      <label htmlFor="lang-switch">
-        {t('config_lang')}
-      </label>
-      <div id="lang-switch" className="config-lang">
-        <LanguageSwitcher />
-      </div>
+      <LanguageSwitcher />
       <hr className="rule" />
       <SwitchTemplate template={template} setTemplate={setTemplate} />
       <hr className="rule" />
       {template === 'modern' &&
-        <>
-          <label htmlFor="config-color">
-            {t('config_color')}
-          </label>
-          <div id="config-color" className="config-color">
-            <div className="accent">
-              <label htmlFor="accent-color">
-                {t("accent_color")}
-              </label>
-              <input type="color"
-                name="accent-color"
-                id="accent-color"
-                value={style.colors.accent}
-                onChange={(e) => changeStyle('colors', 'accent', e.target.value)}
-              />
-            </div>
-            <div className="font">
-              <label htmlFor="font-color">
-                {t('font_color')}
-              </label>
-              <input type="color"
-                name="font-color"
-                id="font-color"
-                value={style.colors.font}
-                onChange={(e) => changeStyle('colors', 'font', e.target.value)}
-              />
-            </div>
-          </div>
-          <hr className="rule" />
-        </>
+        <ConfigColors style={style} changeStyle={changeStyle} />
       }
-      <label htmlFor="config-font">
-        {t('config_font')}
-      </label>
-      <div id="config-font" className="config-font">
-        <button
-          onClick={(e) => changeStyle('font', 'style', 'sans-serif')}
-          style={{
-            'font-family': 'sans-serif',
-            'backgroundColor': style.font.style === 'sans-serif' ? 'rgba(10, 10, 10, 0.3)' : ''
-          }}
-        >
-          Sans Serif
-        </button>
-        <button
-          onClick={(e) => changeStyle('font', 'style', 'serif')}
-          style={{
-            'font-family': 'serif',
-            'backgroundColor': style.font.style === 'serif' ? 'rgba(10, 10, 10, 0.3)' : ''
-          }}>
-          Serif
-        </button>
-      </div>
-      <hr className="rule" />
+      <ConfigFonts style={style} changeStyle={changeStyle} />
       {template === 'modern' &&
-        <>
-          <label htmlFor="config-scale">
-            {t('config_scale')}
-          </label>
-          <div id="config-scale" className="config-scale">
-            <div className="scale">
-              <label htmlFor="page-scale">
-                {t('page_scale')}
-              </label>
-              <input type="range"
-                name="page-scale"
-                id="page-scale"
-                value={style.scale.paperScale}
-                min={0.5}
-                max={1.00}
-                step={0.05}
-                onChange={(e) => changeStyle('scale', 'paperScale', e.target.value)}
-              />
-            </div>
-            <div className="scale">
-              <label htmlFor="image-scale">
-                {t('photo_scale')}
-              </label>
-              <input type="range"
-                name="image-scale"
-                id="image-scale"
-                min={140}
-                max={210}
-                step={5}
-                value={style.scale.imageSize}
-                onChange={(e) => changeStyle('scale', 'imageSize', e.target.value)}
-              />
-            </div>
-          </div>
-          <hr className="rule" />
-        </>
+        <ConfigScale style={style} changeStyle={changeStyle} />
       }
       <AutosaveConfig save={save} setSave={setSave} />
     </section>
