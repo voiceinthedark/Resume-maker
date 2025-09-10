@@ -6,9 +6,13 @@ import ClassicSkill from "./ClassicSkill";
 import ClassicProfile from "./ClassicProfile";
 import ClassicLanguage from "./ClassicLanguage";
 
-export default function ClassicResume({ data }) {
+export default function ClassicResume({ data, style }) {
   return (
-    <main id="classic-resume" className="classic-resume">
+    <main
+      id="classic-resume"
+      className="classic-resume"
+      style={{ fontFamily: style.font.style }}
+    >
       <ClassicHeader data={data} />
       <ClassicProfile data={data} />
       <ClassicEducation data={data} />

@@ -1,13 +1,11 @@
-import { useState, useEffect } from "react"
-import defaultStyle from "./utils/defaultStyle"
 import '../styles/configedit.css'
 import { useTranslation } from "react-i18next"
 import LanguageSwitcher from "./utils/LanguageSwitcher"
 import AutosaveConfig from "./AutoSaveConfig"
 import SwitchTemplate from "./utils/SwitchTemplates"
 
-export default function ConfigEdit({ save, setSave, template, setTemplate }) {
-  const [style, setStyle] = useState(defaultStyle)
+export default function ConfigEdit({ style, setStyle, save, setSave, template, setTemplate }) {
+
 
   const { t } = useTranslation('common')
 
@@ -20,42 +18,6 @@ export default function ConfigEdit({ save, setSave, template, setTemplate }) {
       }
     }))
   }
-
-  useEffect(() => {
-    document.getElementById('root').style.setProperty('--bg-header-color', style.colors.accent)
-
-  }, [style.colors.accent])
-
-  useEffect(() => {
-    document.getElementById('root').style.setProperty('--font-color', style.colors.font)
-
-  }, [style.colors.font])
-
-  useEffect(() => {
-    const preview = template === 'modern'
-      ? document.getElementById('resume-preview')
-      : document.getElementById('classic-resume')
-
-    style.font.style === 'serif'
-      ? preview.style.fontFamily = getComputedStyle(document.documentElement).getPropertyValue('--font-serif')
-      : preview.style.fontFamily = getComputedStyle(document.documentElement).getPropertyValue('--font-sans')
-  }, [style.font.style])
-
-  useEffect(() => {
-    const preview = template === 'modern'
-      ? document.getElementById('resume-preview')
-      : document.getElementById('classic-resume')
-
-    preview.style.setProperty('--scale', style.scale.paperScale)
-  }, [style.scale.paperScale])
-
-  useEffect(() => {
-    const preview = template === 'modern'
-      ? document.getElementById('resume-preview')
-      : document.getElementById('classic-resume')
-
-    preview.style.setProperty('--photo-size', style.scale.imageSize)
-  }, [style.scale.imageSize])
 
 
   return (
@@ -107,16 +69,17 @@ export default function ConfigEdit({ save, setSave, template, setTemplate }) {
       <div id="config-font" className="config-font">
         <button
           onClick={(e) => changeStyle('font', 'style', 'sans-serif')}
-          style={{ 
+          style={{
             'font-family': 'sans-serif',
             'backgroundColor': style.font.style === 'sans-serif' ? 'rgba(10, 10, 10, 0.3)' : ''
           }}
-          >
+        >
           Sans Serif
         </button>
         <button
           onClick={(e) => changeStyle('font', 'style', 'serif')}
-          style={{ 'font-family': 'serif',
+          style={{
+            'font-family': 'serif',
             'backgroundColor': style.font.style === 'serif' ? 'rgba(10, 10, 10, 0.3)' : ''
           }}>
           Serif

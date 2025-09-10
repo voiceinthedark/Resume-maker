@@ -34,8 +34,8 @@ Configurable layouts, and easy to use and navigate.
 
 - [x] ! Fix the print styling when on mobile 
 - [ ] Streamline and refactor the configuration component 
-- [ ] Add styling to font choice to make it more obvious what font is active
-- [ ] Personal config choices to be saved in local storage 
+- [x] Add styling to font choice to make it more obvious what font is active
+- [x] Personal config choices to be saved in local storage 
 
 ## Acknowledgments
 

@@ -1,4 +1,4 @@
-export default {
+const defaultStyle = {
   colors: {
     accent: '#d3d3d3',
     font: '#000000',
@@ -11,3 +11,5 @@ export default {
     imageSize: '180',
   }
 }
+
+export { defaultStyle }
