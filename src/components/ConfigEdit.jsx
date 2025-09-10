@@ -107,12 +107,18 @@ export default function ConfigEdit({ save, setSave, template, setTemplate }) {
       <div id="config-font" className="config-font">
         <button
           onClick={(e) => changeStyle('font', 'style', 'sans-serif')}
-          style={{ 'font-family': 'sans-serif' }}>
+          style={{ 
+            'font-family': 'sans-serif',
+            'backgroundColor': style.font.style === 'sans-serif' ? 'rgba(10, 10, 10, 0.3)' : ''
+          }}
+          >
           Sans Serif
         </button>
         <button
           onClick={(e) => changeStyle('font', 'style', 'serif')}
-          style={{ 'font-family': 'serif' }}>
+          style={{ 'font-family': 'serif',
+            'backgroundColor': style.font.style === 'serif' ? 'rgba(10, 10, 10, 0.3)' : ''
+          }}>
           Serif
         </button>
       </div>

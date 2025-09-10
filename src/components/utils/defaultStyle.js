@@ -1,7 +1,7 @@
 export default {
   colors: {
-    accent: 'lightgray',
-    font: '#000',
+    accent: '#d3d3d3',
+    font: '#000000',
   },
   font: {
     style: 'sans-serif'
