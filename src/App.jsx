@@ -1,4 +1,5 @@
 import { Suspense, useEffect, useState } from 'react'
+import {defaultStyle} from "./components/utils/defaultStyle.js"
 import ResumePreview from './components/resume/ResumePreview'
 import ResumeEdit from './components/ResumeEdit'
 import './styles/App.css'
